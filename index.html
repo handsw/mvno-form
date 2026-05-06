@@ -631,6 +631,7 @@
           <td colspan="3">
             <label class="lbl"><input type="radio" name="pay_type" value="계좌" checked onchange="togglePay(this.value)"> 계좌자동이체</label>
             <label class="lbl"><input type="radio" name="pay_type" value="카드" onchange="togglePay(this.value)"> 카드자동납부</label>
+            <span style="color: red; font-size: 12px; margin-left: 15px;">※ 가입자 본인 명의로만 가능합니다</span>
           </td>
         </tr>
         <tr>
@@ -1426,9 +1427,6 @@ function togglePay(v) {
   document.getElementById('lbl_owner').textContent   = card ? '카드주명'      : '예금주명';
   document.getElementById('lbl_bank').textContent    = card ? '카드사'        : '은행';
   document.getElementById('lbl_account').textContent = card ? '카드번호'      : '계좌번호';
-  document.getElementById('inp_owner').placeholder   = card ? '카드주명'      : '예금주명';
-  document.getElementById('inp_bank').placeholder    = card ? '카드사명'      : '은행명';
-  document.getElementById('inp_account').placeholder = card ? '카드번호 입력' : '계좌번호 입력';
   document.getElementById('row_expiry').style.display = card ? '' : 'none';
 }
 
