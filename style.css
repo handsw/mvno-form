@@ -711,6 +711,18 @@ input[type="checkbox"], input[type="radio"] {
   font-weight: 700;
 }
 
+#validModal .modal-btn {
+  width: 100%;
+  padding: 12px 24px;
+  background: var(--primary);
+  color: #ffffff;
+  margin-top: 8px;
+}
+
+#validModal .modal-btn:hover {
+  background: #002566;
+}
+
 /* ─────────────────────────────────────────────────────────────
    PRINT MEDIA QUERY
    ───────────────────────────────────────────────────────────── */
