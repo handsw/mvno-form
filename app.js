@@ -21,6 +21,30 @@ let isDrawing = false;
 let lastPosition = { x: 0, y: 0 };
 let hasDrawed = false;
 
+// ─────────────────────────────────────────────────────────────
+//  화면 라우팅 및 퍼널 제어 (Screen Routing & Funnel Controls)
+// ─────────────────────────────────────────────────────────────
+function showLGForm() {
+  document.getElementById('funnel-landing-screen').classList.add('hidden-screen');
+  document.getElementById('kt-construction-screen').classList.add('hidden-screen');
+  document.getElementById('lg-form-screen').classList.remove('hidden-screen');
+  window.scrollTo(0, 0);
+}
+
+function showKTConstruction() {
+  document.getElementById('funnel-landing-screen').classList.add('hidden-screen');
+  document.getElementById('lg-form-screen').classList.add('hidden-screen');
+  document.getElementById('kt-construction-screen').classList.remove('hidden-screen');
+  window.scrollTo(0, 0);
+}
+
+function showLandingScreen() {
+  document.getElementById('lg-form-screen').classList.add('hidden-screen');
+  document.getElementById('kt-construction-screen').classList.add('hidden-screen');
+  document.getElementById('funnel-landing-screen').classList.remove('hidden-screen');
+  window.scrollTo(0, 0);
+}
+
 // 페이지가 완전히 로드되면 동작 초기화
 document.addEventListener('DOMContentLoaded', () => {
   initSignatureModal();
