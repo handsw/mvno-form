@@ -142,13 +142,13 @@ function updateNewNumNotice() {
   const isChecked = chkRandomNum.checked;
 
   if (hasInput && isChecked) {
-    notice.textContent = '※ 희망번호로 개통가능한 번호가 없을 시, 임의번호로 개통됩니다.';
+    notice.textContent = '※ 희망번호로 개통 가능한 번호가 없을 시, 임의번호로 개통됩니다.';
     notice.style.display = 'block';
   } else if (isChecked) {
-    notice.textContent = '※ 체크시 임의번호로 개통됩니다.';
+    notice.textContent = '※ 체크 시, 임의번호로 개통됩니다.';
     notice.style.display = 'block';
   } else if (hasInput) {
-    notice.textContent = '※ 희망번호로 개통 가능한 번호가 없을 시 개통이 지연될 수 있습니다.';
+    notice.textContent = '※ 희망번호로 개통 가능한 번호가 없을 시, 개통이 지연될 수 있습니다.';
     notice.style.display = 'block';
   } else {
     notice.style.display = 'none';

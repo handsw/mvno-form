@@ -328,16 +328,22 @@
 
       <!-- 신규가입 영역 -->
       <div id="blk_new">
-        <table>
+        <table style="table-layout: fixed; width: 100%;">
+          <colgroup>
+            <col style="width: 15%;">
+            <col style="width: 35%;">
+            <col style="width: 15%;">
+            <col style="width: 35%;">
+          </colgroup>
           <tr>
-            <td class="td-label" style="width:90px;">개통 번호</td>
-            <td style="width:170px;">
-              <input type="text" placeholder="" style="width:150px;" disabled>
+            <td class="td-label">개통 번호</td>
+            <td>
+              <input type="text" placeholder="" style="width:100%;" disabled>
             </td>
-            <td class="td-label" style="width:100px">희망 번호<br><span class="small">(뒷자리 4자리)</span></td>
+            <td class="td-label">희망 번호<br><span class="small">(뒷자리 4자리)</span></td>
             <td>
               <div style="display: flex; align-items: center; gap: 8px;">
-                <input type="text" id="inp_new_num" maxlength="4" style="width:60px">
+                <input type="text" id="inp_new_num" maxlength="4" style="width:60px; flex-shrink: 0;">
                 <label class="lbl" style="margin-right:0; display:inline-flex; align-items:center; gap:3px; cursor:pointer;">
                   <input type="checkbox" id="chk_random_num"> 랜덤번호 생성
                 </label>
