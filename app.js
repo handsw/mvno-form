@@ -104,6 +104,10 @@ function toggleBiz(value) {
   // 에러 리셋
   document.getElementById('inp_new_num').classList.remove('field-error');
   document.getElementById('inp_mnp_num').classList.remove('field-error');
+  const chkRandom = document.getElementById('chk_random_num');
+  if (chkRandom) {
+    chkRandom.parentElement.classList.remove('check-error');
+  }
   
   // 이전 잔여값 클리어
   if (isNew) {
@@ -117,6 +121,38 @@ function toggleBiz(value) {
     document.querySelector('.mvno-name').value = '';
   } else {
     document.getElementById('inp_new_num').value = '';
+    if (chkRandom) {
+      chkRandom.checked = false;
+    }
+  }
+
+  updateNewNumNotice();
+}
+
+// ─────────────────────────────────────────────────────────────
+//  희망번호/랜덤번호 유의사항 업데이트 (updateNewNumNotice)
+// ─────────────────────────────────────────────────────────────
+function updateNewNumNotice() {
+  const inpNewNum = document.getElementById('inp_new_num');
+  const chkRandomNum = document.getElementById('chk_random_num');
+  const notice = document.getElementById('new_num_notice');
+  if (!inpNewNum || !chkRandomNum || !notice) return;
+
+  const hasInput = inpNewNum.value.trim() !== '';
+  const isChecked = chkRandomNum.checked;
+
+  if (hasInput && isChecked) {
+    notice.textContent = '※ 희망번호로 개통가능한 번호가 없을 시, 임의번호로 개통됩니다.';
+    notice.style.display = 'block';
+  } else if (isChecked) {
+    notice.textContent = '※ 체크시 임의번호로 개통됩니다.';
+    notice.style.display = 'block';
+  } else if (hasInput) {
+    notice.textContent = '※ 희망번호로 개통 가능한 번호가 없을 시 개통이 지연될 수 있습니다.';
+    notice.style.display = 'block';
+  } else {
+    notice.style.display = 'none';
+    notice.textContent = '';
   }
 }
 
@@ -306,6 +342,34 @@ function initSignatureModal() {
       }
     });
   });
+
+  // 희망번호 입력 및 랜덤번호 생성 체크 관련 이벤트 리스너
+  const inpNewNum = document.getElementById('inp_new_num');
+  const chkRandomNum = document.getElementById('chk_random_num');
+
+  if (inpNewNum) {
+    inpNewNum.addEventListener('input', () => {
+      inpNewNum.classList.remove('field-error');
+      if (inpNewNum.value.trim() !== '') {
+        if (chkRandomNum) {
+          chkRandomNum.parentElement.classList.remove('check-error');
+        }
+      }
+      updateNewNumNotice();
+    });
+  }
+
+  if (chkRandomNum) {
+    chkRandomNum.addEventListener('change', () => {
+      chkRandomNum.parentElement.classList.remove('check-error');
+      if (chkRandomNum.checked) {
+        if (inpNewNum) {
+          inpNewNum.classList.remove('field-error');
+        }
+      }
+      updateNewNumNotice();
+    });
+  }
 }
 
 function openSignatureModal() {
@@ -373,7 +437,17 @@ function validateAndPrint() {
   if (bizType === '번호이동') {
     fieldsToCheck.push({ id: 'inp_mnp_num', label: '이동할 번호', type: 'text' });
   } else {
-    fieldsToCheck.push({ id: 'inp_new_num', label: '희망 번호', type: 'text' });
+    // 신규가입의 경우: 희망번호 입력 또는 랜덤번호 생성 선택 둘 중 하나는 해야 함
+    const inpNewNum = document.getElementById('inp_new_num');
+    const chkRandomNum = document.getElementById('chk_random_num');
+    const hasInput = inpNewNum && inpNewNum.value.trim() !== '';
+    const isChecked = chkRandomNum && chkRandomNum.checked;
+    
+    if (!hasInput && !isChecked) {
+      if (inpNewNum) inpNewNum.classList.add('field-error');
+      if (chkRandomNum) chkRandomNum.parentElement.classList.add('check-error');
+      errors.push('희망 번호 입력 또는 랜덤번호 생성 선택');
+    }
   }
 
   fieldsToCheck.forEach(({ id, label, type }) => {

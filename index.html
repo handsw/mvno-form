@@ -330,12 +330,22 @@
       <div id="blk_new">
         <table>
           <tr>
-            <td class="td-label">개통 번호</td>
-            <td><input type="text" placeholder=></td>
+            <td class="td-label" style="width:90px;">개통 번호</td>
+            <td style="width:170px;">
+              <input type="text" placeholder="" style="width:150px;" disabled>
+            </td>
             <td class="td-label" style="width:100px">희망 번호<br><span class="small">(뒷자리 4자리)</span></td>
-            <td><input type="text" id="inp_new_num" maxlength="4" style="width:60px"></td>
+            <td>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <input type="text" id="inp_new_num" maxlength="4" style="width:60px">
+                <label class="lbl" style="margin-right:0; display:inline-flex; align-items:center; gap:3px; cursor:pointer;">
+                  <input type="checkbox" id="chk_random_num"> 랜덤번호 생성
+                </label>
+              </div>
+            </td>
           </tr>
         </table>
+        <div id="new_num_notice" style="font-size:7.5pt; color:var(--accent); margin-top:4px; padding-left:5px; font-weight:500; display:none;"></div>
       </div>
 
 <!-- 번호이동 영역 -->
