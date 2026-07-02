@@ -813,17 +813,21 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 /* Hover effects for LG */
+/* 망 구분 포인트 컬러 (선택 카드) */
+.network-card.network-lg { --network-color: #E6007E; }  /* LG U+ 마젠타 */
+.network-card.network-kt { --network-color: #EE1C25; }  /* KT 레드 */
+
 .network-card.network-lg:hover {
-  border-color: #e6007e;
+  border-color: var(--network-color);
   transform: translateY(-4px);
   box-shadow: 0 12px 24px -10px rgba(230, 0, 126, 0.3);
 }
 
 /* Hover effects for KT */
 .network-card.network-kt:hover {
-  border-color: #d71920;
+  border-color: var(--network-color);
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px -10px rgba(215, 25, 32, 0.25);
+  box-shadow: 0 12px 24px -10px rgba(238, 28, 37, 0.25);
 }
 
 .network-badge {
@@ -896,20 +900,16 @@ input[type="checkbox"], input[type="radio"] {
   width: 100%;
   font-size: 0.88rem;
   font-weight: 700;
-  color: var(--primary);
-  background: #f1f5f9;
+  color: var(--network-color, var(--primary));
+  background: #ffffff;
+  border: 1.5px solid var(--network-color, #e2e8f0);
   padding: 10px 0;
   border-radius: var(--radius-sm);
   transition: all 0.2s ease;
 }
 
-.network-card.network-lg:hover .network-btn-label {
-  background: #e6007e;
-  color: #ffffff;
-}
-
-.network-card.network-kt:hover .network-btn-label {
-  background: #d71920;
+.network-card:hover .network-btn-label {
+  background: var(--network-color);
   color: #ffffff;
 }
 
@@ -1085,6 +1085,48 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 /* ─────────────────────────────────────────────────────────────
+   망 구분 색상 테마 (기본 아정당 블루 #003087 유지)
+   <body data-network="lg|kt"> 로 --network-color 주입 · 파일 분기 없음
+   ───────────────────────────────────────────────────────────── */
+body[data-network="lg"] { --network-color: #E6007E; }   /* LG U+ 마젠타 */
+body[data-network="kt"] { --network-color: #EE1C25; }   /* KT 레드 */
+
+/* 문서 타이틀 / 동의서 표제 옆 망 구분 배지
+   (흑백 인쇄 대비: 색이 빠져도 텍스트 'LG U+망'/'KT망' 으로 식별) */
+.doc-net-badge {
+  display: inline-block;
+  background: var(--network-color, var(--primary));
+  color: #ffffff;
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.35;
+  padding: 1px 10px;
+  margin-left: 10px;
+  border-radius: 999px;
+  vertical-align: middle;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.consent-page-title .doc-net-badge { font-size: 8pt; }
+
+/* 페이지 상단 4px 망 색상 바 (화면: 시트별) */
+.consent-doc { position: relative; }
+.page::before,
+.consent-doc::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--network-color, var(--primary));
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ─────────────────────────────────────────────────────────────
    PRINT MEDIA QUERY
    ───────────────────────────────────────────────────────────── */
 @media print {
@@ -1170,5 +1212,23 @@ input[type="checkbox"], input[type="radio"] {
   .consent-final-sign,
   .sign-area {
     page-break-inside: avoid;
+  }
+
+  /* 망 색상 바: 인쇄 시 매 페이지 상단에 고정 반복 (position:fixed) */
+  .page::before,
+  .consent-doc::before {
+    display: none;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--network-color, var(--primary));
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    z-index: 9999;
   }
 }
