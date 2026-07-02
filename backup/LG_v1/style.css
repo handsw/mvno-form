@@ -1045,46 +1045,6 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 /* ─────────────────────────────────────────────────────────────
-   FLOWING CONSENT DOCUMENT (개인정보 활용동의서 · 2~3p 자연 분할)
-   화면에서는 A4 폭의 연속 시트로 보이고, 인쇄 시 page-break 규칙에 따라
-   여러 장으로 자연스럽게 나뉩니다. (고정 .page 대신 사용)
-   ───────────────────────────────────────────────────────────── */
-.consent-doc {
-  width: 210mm;
-  background: var(--bg-page);
-  padding: 8mm 8mm 6mm;
-  margin-bottom: 25px;
-  box-shadow: var(--shadow);
-  border: 1px solid #cbd5e1;
-  box-sizing: border-box;
-}
-
-/* 각 동의 항목(1항~11항) 묶음 */
-.consent-item {
-  margin-bottom: 3px;
-}
-
-/* ─────────────────────────────────────────────────────────────
-   KT망 [확인 필요] 검토 표시 (내부 검토용 · 화면/인쇄 모두 노출)
-   ───────────────────────────────────────────────────────────── */
-.review-flag {
-  background: #fff3a3;
-  border-bottom: 1px dashed #c79a00;
-  padding: 0 2px;
-  border-radius: 2px;
-}
-
-.review-row > td {
-  background: #fff3a3 !important;
-}
-
-.review-note {
-  color: #a06b00;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-/* ─────────────────────────────────────────────────────────────
    PRINT MEDIA QUERY
    ───────────────────────────────────────────────────────────── */
 @media print {
@@ -1130,45 +1090,5 @@ input[type="checkbox"], input[type="radio"] {
   @page {
     size: A4;
     margin: 0;
-  }
-
-  /* ── 동의서 자연 분할 규칙 ────────────────────────────────
-     페이지-1 신청서 본문은 고정 .page(위 규칙, page-break-after:always)로
-     한 장을 채우고, 그 뒤 .consent-doc 가 아래 규칙에 따라 흘러갑니다. */
-  .consent-doc {
-    width: 210mm;
-    padding: 8mm 8mm 6mm !important;
-    margin: 0 !important;
-    border: none !important;
-    box-shadow: none !important;
-    overflow: visible !important;
-  }
-
-  /* 표 행이 페이지 중간에서 잘리지 않도록 */
-  tr {
-    page-break-inside: avoid;
-  }
-
-  /* 동의 항목(1항~11항) 각 섹션은 어중간하게 잘리지 않게 한 덩어리 유지 */
-  .consent-item {
-    page-break-inside: avoid;
-  }
-
-  /* 예외: 한 섹션이 A4 한 장을 넘는 경우(2항·4항 표)는 자연 분할 허용 */
-  .consent-item--flow {
-    page-break-inside: auto;
-  }
-
-  /* 섹션 제목이 페이지 맨 아래에 혼자 남지 않도록 */
-  .sec-head,
-  .consent-page-title,
-  h2, h3 {
-    page-break-after: avoid;
-  }
-
-  /* 최종 동의·서명란은 항상 잘리지 않는 한 덩어리로 유지 */
-  .consent-final-sign,
-  .sign-area {
-    page-break-inside: avoid;
   }
 }

@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>아정당알뜰폰 가입신청서</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ── 망 선택 랜딩 화면 (Network Selection) ── -->
+  <div id="funnel-landing-screen" class="landing-screen no-print">
+    <div class="landing-container">
+      <div class="landing-card">
+        <div class="landing-logo">
+          <!-- Logo SVG -->
+          <svg viewBox="0 0 455 370" xmlns="http://www.w3.org/2000/svg" aria-label="아정당 알뜰폰 로고" role="img">
+            <mask id="landing_mask0" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="225" width="151" height="145">
+              <path d="M105.9 293.3V229.8H127.5V250.8H150.2V270.2H127.5V293.3H105.9ZM28.2 369.8C22.9 369.8 18.8 368.1 15.8 364.8C12.8 361.5 11.3 357.5 11.3 352.7V325.1H105.9V317.6H11.3V299.2H116C119.6 299.2 122.4 300.3 124.4 302.5C126.4 304.5 127.5 307.2 127.5 310.7V342.3H32.9V350.4H128.9V369.8H28.2ZM39 225C44.8 225 50 225.9 54.6 227.8C59.3 229.5 63.3 231.8 66.9 234.9C70.3 238 73 241.6 74.9 245.8C77 249.9 78 254.4 78 259.4C78 264.3 77 268.9 74.9 273.1C73 277.2 70.3 280.8 66.9 283.9C63.3 286.9 59.3 289.3 54.6 291C50 292.7 44.8 293.6 39 293.6C33.2 293.6 27.9 292.7 23.2 291C18.6 289.3 14.5 286.9 11 283.9C7.5 280.8 4.80001 277.2 2.90001 273.1C1.00001 268.9 0 264.3 0 259.4C0 254.4 1.00001 249.9 2.90001 245.8C4.90001 241.6 7.5 238 11 234.9C14.5 231.8 18.6 229.5 23.2 227.8C27.9 225.9 33.2 225 39 225ZM39 242.8C33.9 242.8 29.7 244.3 26.4 247.4C23.2 250.5 21.6 254.4 21.6 259.4C21.6 264.3 23.2 268.3 26.4 271.3C29.7 274.3 33.8 275.8 39 275.8C44.2 275.8 48.4 274.3 51.6 271.3C54.8 268.3 56.4 264.3 56.4 259.4C56.4 254.4 54.8 250.5 51.6 247.4C48.4 244.3 44.2 242.8 39 242.8Z" fill="white"/>
+            </mask>
+            <g mask="url(#landing_mask0)">
+              <path d="M0.0159912 225.012H150.42V369.762H0.0159912V225.012Z" fill="#145CE6"/>
+            </g>
+            <mask id="landing_mask1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="160" y="229" width="139" height="141">
+              <path d="M184.5 369.8C179.2 369.8 175.1 368.1 172.1 364.8C169.1 361.5 167.6 357.5 167.6 352.7V328.1H269.7V322H167.6V304.1H279.9C283.4 304.1 286.2 305.2 288.3 307.3C290.3 309.4 291.3 312.1 291.3 315.5V344.6H189.2V351H292.8V369.8H184.5ZM189.2 257.4H218.7V247.1H189.2V257.4ZM240.2 257.4H291.3V274.7H179.2C175.6 274.7 172.8 273.7 170.6 271.7C168.6 269.6 167.6 266.8 167.6 263.3V241.3C167.6 237.9 168.6 235.1 170.6 233.1C172.8 230.9 175.6 229.9 179.2 229.9H291.3V247.1H240.2V257.4ZM298.7 298.3H160.2V281H298.7V298.3Z" fill="white"/>
+            </mask>
+            <g mask="url(#landing_mask1)">
+              <path d="M160.168 229.853H298.73V369.498H160.168V229.853Z" fill="#145CE6"/>
+            </g>
+            <mask id="landing_mask2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="36" y="0" width="383" height="180">
+              <path d="M414.7 0H70.3002C67.3002 0 64.7002 2.20001 64.2002 5.10001L36.3002 176.2C35.7002 179.7 41.6002 181.5 43.4002 178.4C62.4002 145.4 89.2002 124.5 134.7 124.5H396C398.6 124.5 400.5 122.2 400 119.7L388.6 62.2L418.3 5.90001C419.7 3.20001 417.8 0 414.7 0ZM137.8 101.4C115.7 101.4 97.8002 83.8 97.8002 62.2C97.8002 40.6 115.7 23.1 137.8 23.1C159.8 23.1 177.7 40.6 177.7 62.2C177.7 83.8 159.8 101.4 137.8 101.4ZM260.6 46.2H236.1V62.2C238.4 65.9 243 69.8 247.4 72.5C250 74.2 255.1 77.4 260.6 78.3V98.4H259.3C249.4 98.4 232.2 88.4 223.8 80.3C215.3 88.4 198.2 98.4 188.3 98.4H186.9V78.3C192.5 77.4 197.5 74.2 200.2 72.5C204.5 69.8 209.2 65.9 211.4 62.3L211.5 46.2H186.9V26.1H260.6V46.2ZM346.7 46.2H297.5V78.3H346.7V98.4H272.9V26.1H346.7V46.2Z" fill="white"/>
+            </mask>
+            <g mask="url(#landing_mask2)">
+              <path d="M32.4919 -3.73804H422.873V183.762H32.4919V-3.73804Z" fill="#145CE6"/>
+            </g>
+            <mask id="landing_mask3" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="118" y="43" width="40" height="39">
+              <path d="M137.8 81.3C148.5 81.3 157.2 72.8 157.2 62.2C157.2 51.7 148.5 43.2 137.8 43.2C127 43.2 118.3 51.7 118.3 62.2C118.3 72.8 127 81.3 137.8 81.3Z" fill="white"/>
+            </mask>
+            <g mask="url(#landing_mask3)">
+              <path d="M32.4918 -3.73804H422.873V183.762H32.4918V-3.73804Z" fill="#145CE6"/>
+            </g>
+            <mask id="landing_mask4" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="316" y="229" width="139" height="141">
+              <path d="M323.9 352.7V327.2H345.5V350.4H448.4V369.8H340.8C335.5 369.8 331.4 368.1 328.4 364.8C325.4 361.5 323.9 357.5 323.9 352.6M396.5 287.5V300.4H455V319.7H316.5V300.4H374.9V287.5H323.9V268.1H344.8V249.2H323.9V229.9H447.6V249.2H426.7V268.1H447.6V287.5H396.5ZM366.4 268.1H405.1V249.2H366.4V268.1Z" fill="white"/>
+            </mask>
+            <g mask="url(#landing_mask4)">
+              <path d="M316.454 229.853H455.016V369.498H316.454V229.853Z" fill="#145CE6"/>
+            </g>
+          </svg>
+        </div>
+        <h1 class="landing-title">아정당알뜰폰 가입신청서</h1>
+        <p class="landing-subtitle">개통을 원하시는 통신망을 선택해 주세요.</p>
+        
+        <div class="network-grid">
+          <button class="network-card network-lg" onclick="showLGForm()">
+            <div class="network-badge lguplus">LG U+</div>
+            <div class="network-logo-wrapper lg-color-logo">
+              <div class="brand-symbol lg-symbol"></div>
+              <div class="brand-text">LG U+망</div>
+            </div>
+            <div class="network-name">LG U+망 가입신청서</div>
+            <div class="network-btn-label">신청서 작성하기 &rarr;</div>
+          </button>
+          
+          <button class="network-card network-kt" onclick="showKTConstruction()">
+            <div class="network-badge kt">KT</div>
+            <div class="network-logo-wrapper kt-color-logo">
+              <div class="brand-symbol kt-symbol"></div>
+              <div class="brand-text">KT망</div>
+            </div>
+            <div class="network-name">KT망 가입신청서</div>
+            <div class="network-btn-label coming-soon">제작 중...</div>
+          </button>
+        </div>
+        
+        <div class="landing-footer">
+          Copyright © 아정커뮤니케이션 Corp. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── KT망 제작 중 화면 (KT Under Construction) ── -->
+  <div id="kt-construction-screen" class="construction-screen hidden-screen no-print">
+    <div class="construction-container">
+      <div class="construction-card">
+        <div class="construction-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
+        </div>
+        <h2 class="construction-title">KT망 가입신청서 준비 중</h2>
+        <p class="construction-desc">
+          현재 KT망 가입에 필요한 개인정보활용동의서 및 약관을 정리하고 있습니다.<br>
+          빠른 시일 내에 준비하여 서비스를 제공해 드리겠습니다.
+        </p>
+        <button class="btn-back" onclick="showLandingScreen()">&larr; 이전 화면으로</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── LG망 가입신청서 화면 (LG Form Screen) ── -->
+  <div id="lg-form-screen" class="hidden-screen">
+    <!-- Sticky Top Bar (Screen Only) -->
+    <div class="top-bar no-print">
+      <div class="top-bar-brand">
+        <button class="btn-top-back" onclick="showLandingScreen()">&larr; 망 선택</button>
+        <h1>아정당알뜰폰 가입신청서 (LG U+)</h1>
+      </div>
+      <button class="btn-print" onclick="validateAndPrint()">🖨️ 신청서 인쇄 / PDF 저장</button>
+    </div>
+
+    <!-- Document Container for Slate Background -->
+    <div class="document-container">
+
+<!-- ── 필수항목 미입력 모달 ── -->
+<div id="validModal">
+  <div class="modal-box">
+    <div class="modal-title">⚠️ 필수 항목을 확인해 주세요</div>
+    <ul class="modal-list" id="errorList"></ul>
+    <button class="modal-btn" onclick="closeModal()">확인 후 수정하기</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ PAGE 1 ══ -->
+<div class="page">
+
+
+
+  <!-- 헤더 -->
+  <div class="doc-header">
+<div class="logo-cell">
+  <div class="logo-svg-wrap">
+    <svg viewBox="0 0 455 370" xmlns="http://www.w3.org/2000/svg" aria-label="아정당 알뜰폰 로고" role="img">
+      <mask id="mask0_37_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="225" width="151" height="145">
+        <path d="M105.9 293.3V229.8H127.5V250.8H150.2V270.2H127.5V293.3H105.9ZM28.2 369.8C22.9 369.8 18.8 368.1 15.8 364.8C12.8 361.5 11.3 357.5 11.3 352.7V325.1H105.9V317.6H11.3V299.2H116C119.6 299.2 122.4 300.3 124.4 302.5C126.4 304.5 127.5 307.2 127.5 310.7V342.3H32.9V350.4H128.9V369.8H28.2ZM39 225C44.8 225 50 225.9 54.6 227.8C59.3 229.5 63.3 231.8 66.9 234.9C70.3 238 73 241.6 74.9 245.8C77 249.9 78 254.4 78 259.4C78 264.3 77 268.9 74.9 273.1C73 277.2 70.3 280.8 66.9 283.9C63.3 286.9 59.3 289.3 54.6 291C50 292.7 44.8 293.6 39 293.6C33.2 293.6 27.9 292.7 23.2 291C18.6 289.3 14.5 286.9 11 283.9C7.5 280.8 4.80001 277.2 2.90001 273.1C1.00001 268.9 0 264.3 0 259.4C0 254.4 1.00001 249.9 2.90001 245.8C4.90001 241.6 7.5 238 11 234.9C14.5 231.8 18.6 229.5 23.2 227.8C27.9 225.9 33.2 225 39 225ZM39 242.8C33.9 242.8 29.7 244.3 26.4 247.4C23.2 250.5 21.6 254.4 21.6 259.4C21.6 264.3 23.2 268.3 26.4 271.3C29.7 274.3 33.8 275.8 39 275.8C44.2 275.8 48.4 274.3 51.6 271.3C54.8 268.3 56.4 264.3 56.4 259.4C56.4 254.4 54.8 250.5 51.6 247.4C48.4 244.3 44.2 242.8 39 242.8Z" fill="white"/>
+      </mask>
+      <g mask="url(#mask0_37_2)">
+        <path d="M0.0159912 225.012H150.42V369.762H0.0159912V225.012Z" fill="#145CE6"/>
+      </g>
+      <mask id="mask1_37_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="160" y="229" width="139" height="141">
+        <path d="M184.5 369.8C179.2 369.8 175.1 368.1 172.1 364.8C169.1 361.5 167.6 357.5 167.6 352.7V328.1H269.7V322H167.6V304.1H279.9C283.4 304.1 286.2 305.2 288.3 307.3C290.3 309.4 291.3 312.1 291.3 315.5V344.6H189.2V351H292.8V369.8H184.5ZM189.2 257.4H218.7V247.1H189.2V257.4ZM240.2 257.4H291.3V274.7H179.2C175.6 274.7 172.8 273.7 170.6 271.7C168.6 269.6 167.6 266.8 167.6 263.3V241.3C167.6 237.9 168.6 235.1 170.6 233.1C172.8 230.9 175.6 229.9 179.2 229.9H291.3V247.1H240.2V257.4ZM298.7 298.3H160.2V281H298.7V298.3Z" fill="white"/>
+      </mask>
+      <g mask="url(#mask1_37_2)">
+        <path d="M160.168 229.853H298.73V369.498H160.168V229.853Z" fill="#145CE6"/>
+      </g>
+      <mask id="mask2_37_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="36" y="0" width="383" height="180">
+        <path d="M414.7 0H70.3002C67.3002 0 64.7002 2.20001 64.2002 5.10001L36.3002 176.2C35.7002 179.7 41.6002 181.5 43.4002 178.4C62.4002 145.4 89.2002 124.5 134.7 124.5H396C398.6 124.5 400.5 122.2 400 119.7L388.6 62.2L418.3 5.90001C419.7 3.20001 417.8 0 414.7 0ZM137.8 101.4C115.7 101.4 97.8002 83.8 97.8002 62.2C97.8002 40.6 115.7 23.1 137.8 23.1C159.8 23.1 177.7 40.6 177.7 62.2C177.7 83.8 159.8 101.4 137.8 101.4ZM260.6 46.2H236.1V62.2C238.4 65.9 243 69.8 247.4 72.5C250 74.2 255.1 77.4 260.6 78.3V98.4H259.3C249.4 98.4 232.2 88.4 223.8 80.3C215.3 88.4 198.2 98.4 188.3 98.4H186.9V78.3C192.5 77.4 197.5 74.2 200.2 72.5C204.5 69.8 209.2 65.9 211.4 62.3L211.5 46.2H186.9V26.1H260.6V46.2ZM346.7 46.2H297.5V78.3H346.7V98.4H272.9V26.1H346.7V46.2Z" fill="white"/>
+      </mask>
+      <g mask="url(#mask2_37_2)">
+        <path d="M32.4919 -3.73804H422.873V183.762H32.4919V-3.73804Z" fill="#145CE6"/>
+      </g>
+      <mask id="mask3_37_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="118" y="43" width="40" height="39">
+        <path d="M137.8 81.3C148.5 81.3 157.2 72.8 157.2 62.2C157.2 51.7 148.5 43.2 137.8 43.2C127 43.2 118.3 51.7 118.3 62.2C118.3 72.8 127 81.3 137.8 81.3Z" fill="white"/>
+      </mask>
+      <g mask="url(#mask3_37_2)">
+        <path d="M32.4918 -3.73804H422.873V183.762H32.4918V-3.73804Z" fill="#145CE6"/>
+      </g>
+      <mask id="mask4_37_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="316" y="229" width="139" height="141">
+        <path d="M323.9 352.7V327.2H345.5V350.4H448.4V369.8H340.8C335.5 369.8 331.4 368.1 328.4 364.8C325.4 361.5 323.9 357.5 323.9 352.6M396.5 287.5V300.4H455V319.7H316.5V300.4H374.9V287.5H323.9V268.1H344.8V249.2H323.9V229.9H447.6V249.2H426.7V268.1H447.6V287.5H396.5ZM366.4 268.1H405.1V249.2H366.4V268.1Z" fill="white"/>
+      </mask>
+      <g mask="url(#mask4_37_2)">
+        <path d="M316.454 229.853H455.016V369.498H316.454V229.853Z" fill="#145CE6"/>
+      </g>
+    </svg>
+  </div>
+</div>
+    <div class="title-cell">아정당알뜰폰 가입신청서</div>
+  </div>
+
+  <!-- ① 구분 -->
+  <div class="sec-wrap">
+    <div class="sec-head"><span class="sec-num">1</span> 유형</div>
+    <div class="sec-body">
+      <table><tr>
+        <td class="td-label">고객구분</td>
+        <td>
+          <label class="lbl"><input type="radio" name="cust_type" value="개인" checked> 개인</label>
+          <label class="lbl"><input type="radio" name="cust_type" value="개인사업자" disabled> 개인사업자</label>
+          <label class="lbl"><input type="radio" name="cust_type" value="외국인" disabled> 외국인</label>
+          <label class="lbl"><input type="radio" name="cust_type" value="법인" disabled> 법인</label>
+        </td>
+      </tr></table>
+    </div>
+  </div>
+
+  <!-- ② 요금제 -->
+  <div class="sec-wrap">
+    <div class="sec-head"><span class="sec-num">2</span> 요금제</div>
+    <div class="sec-body">
+      <table>
+        <tr>
+          <td class="td-label">요금제 선택</td>
+          <td colspan="3">
+            <select id="planSelect" onchange="fillPlan()">
+              <option value="">── 요금제를 선택하세요 ──</option>
+              <optgroup label="── 무약정 평생 요금제 ──">
+                <option value="life_4.5GB">(평생) 4.5GB + 1Mbps (월 9,900원)</option>
+                <option value="life_7GB">(평생) 7GB + 1Mbps (월 16,900원)</option>
+                <option value="life_10GB">(평생) 10GB + 1Mbps (월 19,900원)</option>
+                <option value="life_15GB_100">(평생) 15GB + 3Mbps [통화/문자 100] (월 24,900원)</option>
+                <option value="life_15GB_300">(평생) 15GB + 3Mbps [통화/문자 300] (월 25,900원)</option>
+                <option value="life_71GB">(평생) 71GB + 3Mbps (월 32,900원)</option>
+                <option value="life_150GB">(평생) 150GB + 5Mbps (월 39,900원)</option>
+                <option value="life_100GB">(평생) 100GB + 5Mbps (월 39,900원)</option>
+              </optgroup>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="td-label">월 제공 데이터</td>
+          <td class="td-auto" id="p_data" style="width:280px">-</td>
+          <td class="td-label" style="width:80px">할인기간</td>
+          <td class="td-auto" id="p_period">-</td>
+        </tr>
+        <tr>
+          <td class="td-label">통화</td>
+          <td class="td-auto" id="p_call">-</td>
+          <td class="td-label">부가통화</td>
+          <td class="td-auto" id="p_extra">-</td>
+        </tr>
+        <tr>
+          <td class="td-label">문자</td>
+          <td class="td-auto" id="p_sms">-</td>
+          <td class="td-label">월 청구 요금</td>
+          <td class="td-auto fw7 red" id="p_fee">-</td>
+        </tr>
+      </table>
+      <div class="xs" style="color:#777;padding:2px 3px;margin-top:2px">
+      </div>
+    </div>
+  </div>
+
+<!-- ③ 가입자 정보 -->
+<div class="sec-wrap">
+  <div class="sec-head"><span class="sec-num">3</span> 가입자 정보</div>
+  <div class="sec-body">
+    <table class="subscriber-table">
+      <colgroup>
+        <col style="width:90px">
+        <col style="width:170px">
+        <col style="width:90px">
+        <col style="width:auto">
+      </colgroup>
+
+      <tr>
+        <td class="td-label">가입자명</td>
+        <td><input type="text" id="inp_name" class="form-input"></td>
+        <td class="td-label">생년월일</td>
+        <td><input type="text" id="inp_birth" class="form-input"></td>
+      </tr>
+
+      <tr>
+        <td class="td-label">가입자 주소</td>
+        <td colspan="3"><input type="text" id="inp_addr" class="form-input"></td>
+      </tr>
+
+      <tr>
+        <td class="td-label">연락처</td>
+        <td><input type="text" id="inp_tel" class="form-input"></td>
+        <td class="td-label">청구서 수신</td>
+        <td class="bill-cell">
+          <label class="lbl">
+            <input type="radio" name="bill_method" value="문자" checked onchange="toggleBill(this.value)">
+            문자
+          </label>
+
+          <label class="lbl">
+            <input type="radio" name="bill_method" value="이메일" onchange="toggleBill(this.value)">
+            이메일
+          </label>
+
+          <span id="billEmailWrap" class="inline-side" style="display:none;">
+            <input type="text" class="line-input email-id">
+            <span class="inline-mark">@</span>
+            <input type="text" class="line-input email-domain">
+          </span>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+  <!-- ④ 납부방법 -->
+  <div class="sec-wrap">
+    <div class="sec-head"><span class="sec-num">4</span> 납부방법</div>
+    <div class="sec-body">
+      <table>
+        <tr>
+          <td class="td-label">납부방법</td>
+          <td colspan="3">
+            <label class="lbl"><input type="radio" name="pay_type" value="계좌" checked onchange="togglePay(this.value)"> 계좌자동이체</label>
+            <label class="lbl"><input type="radio" name="pay_type" value="카드" onchange="togglePay(this.value)"> 카드자동납부</label>
+            <span style="color: red; font-size: 12px; margin-left: 15px;">※ 가입자 본인 명의로만 가능합니다</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="td-label" id="lbl_owner">예금주명</td>
+          <td><input type="text" id="inp_owner"></td>
+          <td class="td-label" id="lbl_bank" style="width:60px">은행</td>
+          <td><input type="text" id="inp_bank"></td>
+        </tr>
+        <tr>
+          <td class="td-label" id="lbl_account">계좌번호</td>
+          <td colspan="3"><input type="text" id="inp_account"></td>
+        </tr>
+        <tr id="row_expiry" style="display:none">
+          <td class="td-label">유효기간</td>
+          <td colspan="3"><input type="text" id="inp_expiry" placeholder="MM / YY" style="width:50px"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ⑤ 가입내역 -->
+  <div class="sec-wrap">
+    <div class="sec-head"><span class="sec-num">5</span> 가입내역</div>
+    <div class="sec-body">
+
+      <!-- 업무구분 -->
+      <table style="margin-bottom:5px">
+        <tr>
+          <td class="td-label">업무구분</td>
+          <td>
+            <label class="lbl"><input type="radio" name="biz_type" value="신규" checked onchange="toggleBiz(this.value)"> 신규가입</label>
+            <label class="lbl"><input type="radio" name="biz_type" value="번호이동" onchange="toggleBiz(this.value)"> 번호이동</label>
+          </td>
+        </tr>
+      </table>
+
+      <!-- 신규가입 영역 -->
+      <div id="blk_new">
+        <table>
+          <tr>
+            <td class="td-label">개통 번호</td>
+            <td><input type="text" placeholder=></td>
+            <td class="td-label" style="width:100px">희망 번호<br><span class="small">(뒷자리 4자리)</span></td>
+            <td><input type="text" id="inp_new_num" maxlength="4" style="width:60px"></td>
+          </tr>
+        </table>
+      </div>
+
+<!-- 번호이동 영역 -->
+<div id="blk_mnp" class="cond-off">
+  <table class="mnp-table" style="margin-bottom:4px;">
+    <colgroup>
+      <col style="width:80px">
+      <col style="width:170px">
+      <col style="width:95px">
+      <col style="width:auto">
+    </colgroup>
+    <tr>
+      <td class="td-label">이동할 번호</td>
+      <td><input type="text" id="inp_mnp_num" placeholder=></td>
+      <td class="td-label">변경 전 사업자</td>
+      <td class="carrier-cell">
+        <label class="lbl"><input type="radio" name="prev_carrier" value="LG" onchange="toggleMvnoInput(this.value)"> LG</label>
+        <label class="lbl"><input type="radio" name="prev_carrier" value="KT" onchange="toggleMvnoInput(this.value)"> KT</label>
+        <label class="lbl"><input type="radio" name="prev_carrier" value="SKT" onchange="toggleMvnoInput(this.value)"> SKT</label>
+        <label class="lbl"><input type="radio" name="prev_carrier" value="알뜰" onchange="toggleMvnoInput(this.value)"> 알뜰</label>
+
+        <span id="mvnoNameWrap" class="inline-side" style="display:none;">
+          <input type="text" class="line-input mvno-name" placeholder="사업자명">
+        </span>
+      </td>
+    </tr>
+  </table>
+
+  <div class="notice-box">
+    <div class="nr"><span class="nr-sym">※</span><span>번호이동 제한기간(3개월) 경과 후부터 다른 사업자로 변경하실 수 있습니다. 단, 고객이 번호이동관리센터에 직접 신청하는 경우 제한기간 내에도 변경 가능합니다.</span></div>
+    <div class="nr"><span class="nr-sym">※</span><span>(주)아정커뮤니케이션으로 이동 하신 후, 변경 전 사업자와의 계약관계는 자동 해지되고, (주)아정커뮤니케이션의 이용조건과 통화요금이 적용됩니다.</span></div>
+    <div class="nr"><span class="nr-sym">※</span><span>신청 확인을 위해 번호이동 관리센터 및 변경 전 사업자에게 (성명, 전화번호, 주소 등)를 제공함에 동의합니다.</span></div>
+    <div class="nr"><span class="nr-sym">※</span><span>변경 전 사업자의 이동전화서비스를 중도 해지함에 따라 위약금이 발생할 수 있습니다.</span></div>
+    <div class="nr"><span class="nr-sym">※</span><span>변경 전 사업자에 대한 미납금이 존재할 경우 그 금액을 전 사업자에게 납부하여야 하며, 미납시 이용이 정지될 수 있습니다.</span></div>
+  </div>
+</div>
+
+      <!-- SIM 정보 (공통) -->
+      <table class="mt3">
+        <tr>
+          <td class="td-label">SIM 정보</td>
+          <td>모델명&nbsp;<input type="text" id="inp_sim_model" style="width:120px"></td>
+          <td>일련번호&nbsp;<input type="text" id="inp_sim_serial" style="width:120px"></td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+
+  <!-- 동의사항 -->
+  <div class="agree-block">
+    <div class="agree-row">
+      <span>본 신청서에 기재한 정보는 모두 사실이며, 허위 또는 오기재로 인한 불이익은 가입자에게 책임이 있습니다. 제3자에게 명의를 대여하거나 서비스 가입에 필요한 서류를 제공하는 경우, 해당 정보가 범죄에 악용되어 경제적 피해가 발생할 수 있습니다. 이와 관련하여 발생하는 모든 책임은 가입자에게 있으며, (주)아정커뮤니케이션은 이에 대해 책임을 지지 않습니다. </span>
+    </div>
+    <div class="agree-row">
+      <span>서비스 개통 이후 발생하는 이용요금, 부가서비스 이용, 제3자 사용 등에 대한 책임은 전적으로 가입자에게 있습니다. 본인은 (주)아정커뮤니케이션의 개인정보 처리방침, 5G/LTE/CDMA 이용약관, 위치기반서비스 이용약관, 휴대폰 본인확인 서비스 이용약관 및 발신번호 변작 방지 이용약관의 내용을 확인하고 이에 동의합니다.
+</span>
+    </div>
+    <div class="agree-row">
+      <span>본 가입신청서의 내용과 상충되는 별도의 이면 계약이 존재하지 않음을 확인하며, 이면 계약과 관련하여 (주)아정커뮤니케이션에게 어떠한 권리도 주장하지 않습니다. 이와 관련하여 (주)아정커뮤니케이션은 어떠한 책임도 부담하지 않으며, 이에 대해 안내받고 동의합니다.</span>
+    </div>
+  </div>
+
+<!-- 최종 서명 -->
+<div class="sign-area">
+  <div class="sign-text">
+    본인은 가입신청서와 무선 서비스 계약 표준 안내서 및 약관의 주요 내용에 대해서 충분한 설명을 들었고, 그 내용을 이해했습니다.
+    <br>따라서, 위와 같은 내용으로 계약하는 것에 대해 <span class="fw7 blue" style="font-size:12pt;"> 동의합니다.</span>
+  </div>
+
+  <div class="sign-bottom" style="display:flex; justify-content:space-between; align-items:flex-end;">
+    <div class="sign-date-row">
+      <input type="text" class="print-year" style="width:50px"> 년
+      <input type="text" class="print-month" style="width:40px"> 월
+      <input type="text" class="print-day" style="width:40px"> 일
+    </div>
+
+    <div class="sign-box-wrap" style="display:flex; flex-direction:column; align-items:center;">
+      <div class="sign-label" style="font-size:8pt; margin-bottom:3px; text-align:center;">
+        신청인 / 가입자 &nbsp;(대리인)
+      </div>
+      <div class="p-sign-box" onclick="openSignatureModal()">
+              <span>서명 &nbsp;/&nbsp; 인</span>
+              <img class="signature-image" style="display: none;" alt="Signature">
+            </div>
+    </div>
+  </div>
+</div>
+
+  <div class="doc-footer">
+    본 신청서는 아정커뮤니케이션 업무용으로 제작된 것으로 사전 허락 없이 사용하거나 임의로 수정할 수 없습니다.
+    Copyright © 아정커뮤니케이션 Corp. All Rights Reserved.&nbsp;|&nbsp;고객센터: 1833-2640&nbsp;|&nbsp;www.ajdmobile.co.kr
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════ PAGE 2 ══ -->
+<div class="page">
+  <div class="no-print" style="text-align:right;margin-bottom:6px">
+  </div>
+
+  <div class="consent-page-title">개인정보 활용동의서</div>
+
+  <!-- 1 -->
+<div class="sec-wrap" style="margin-bottom:3px">
+  <div class="sec-head">1. 고유식별 정보 수집·이용 동의
+  </div>
+
+  <div style="font-size:6.1pt; line-height:1.45; padding:4px 4px 3px 4px;">
+    ◦고유식별정보의 수집·이용 목적 : 휴대폰 본인확인 서비스 제공, 본인확인, 본인인증, 미환급금 안내, 실명인증.<br>
+    ◦수집 고유식별 정보의 항목 : 주민등록번호, 여권번호, 운전면허번호, 외국인등록번호 (본인 · 대리인 신분확인 및 내용 포함)<br>
+    　※ 기간통신사업자는 전기통신사업법 시행령 제65조의 2에 의거 주민등록번호 또는 외국인등록번호가 포함된 자료의 처리가 가능합니다.<br>
+    ◦고유식별 정보의 보유 및 이용기간 : 서비스 가입기간 동안 이용하고, 요금정산 과·오납 분쟁 대비를 위하여 해지 후 요금 완납 후 6개월까지 이용<br>
+    ◦동의를 거부할 수 있으나 동의 거부 시 본인확인 및 인증이 불가하여 서비스 가입이 불가능합니다.
+  </div>
+
+  <table class="prv-table-tight">
+    <tr>
+      <th style="width:120px">이용목적</th>
+      <th>수집항목</th>
+      <th style="width:160px">보유 및 이용기간</th>
+    </tr>
+    <tr>
+      <td style="vertical-align:middle;">가입의사 확인</td>
+      <td style="vertical-align:middle;">
+        신분증 기재 사항(대리인 포함) 중 고유식별 번호
+        (주민등록번호, 외국인등록번호, 여권번호, 운전면허번호)
+      </td>
+      <td style="vertical-align:middle;">
+        해당업무 처리 완료 시까지<br>
+        (거절의 경우, 상담 종료 시까지)
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="consent-agree" style="margin-top:1px; margin-bottom:4px;">
+  <span class="fw7 blue">※ 본인은 귀사가 위와 같이 고유식별 정보를 수집·이용하는 것에 동의합니다.</span>
+  <label class="lbl consent-agree-box">
+    <input type="checkbox" id="chk_consent1"> <span class="fw7 blue">동의</span>
+  </label>
+</div>
+
+  <!-- 2 -->
+<div class="sec-wrap" style="margin-bottom:3px">
+  <div class="sec-head">2. 개인정보/개인위치정보 수집·이용 동의 [필수]</div>
+
+  <table class="prv-table-tight">
+    <tr>
+      <th style="width:210px">목적</th>
+      <th>항목</th>
+      <th style="width:130px">보유 및 이용기간</th>
+    </tr>
+
+    <tr>
+      <td style="vertical-align:middle;">
+        신용보험 가입, 신용도 판단, 요금정산(청구,수납,채권추심,통신료 상호정산 등), 신청 서비스·상품 제공 및 안내, 이용빈도 파악 및 통계학적 특성에 따른 서비스 제공, 서비스·상품개발·특화, 이용자 및 서비스 이용에 대한 통계·분석, 물품배송, 고객관계 관리[고지사항 전달, 서비스 이용상황 확인, 서비스 신청 및 해지 기타 업무처리에 필요한 동의와 의사확인, 민원 처리 등 의사소통, 단말기 안전 점검, 멤버십 및 A/S쿠폰 제공, 단말기 출시·변경, 요금 컨설팅, 요금할인의 고객혜택 프로그램 안내] 업무처리(서비스 가입, 개통, 변경, 사후관리, 품질개선, 해지) 명의도용 방지 가입의사 확인, 위치정보 서비스 제공, 휴대폰 보험, 모바일뱅킹 등 제휴 서비스 제공 및 안내, 계약이행, 해지 환급금 안내, 출금계좌 등록 안내, 신용정보집중기관 요금연체 정보 등록 전 및 신용정보회사로 채권추심위탁 전 연체사실 통지(기존에 가입한 상품/서비스(집전화, 인터넷전화, 인터넷TV, 결합상품, mobile VIBro, 기타 상품 등)포함), 이동전화 단기간 가입 회선 관리, 분실 휴대폰 위치정보 조회
+      </td>
+      <td style="vertical-align:middle;">
+        · 명의자(양도인) : 성명(상호), 연락처, 이메일 주소, 청구지 주소, 주민등록주소<br>
+        · 납부자: 성명(상호), 휴대폰번호, 생년월일, 계좌번호, 은행명, 카드사명, 카드번호, 카드 유효기간, 명의자와의 관계<br>
+        · 번호이동 정보 : 번호이동대상번호, 변경전 사업자, 번호이동인증정보<br>
+        · 업무처리 필요 구비서류 이미지 : 신분증, 위임장, 인감증명서, 복지감면확인서류, 대리인 입증서류, 가족관계 확인 등 기타 사실확인 증명서 (대리인 신청 시 대리인 정보를 포함)<br>
+        · 생성 및 기타수집정보 : 단말기 정보(일련번호, MAC정보, 모델명, IMEI 등), USIM정보, 위치정보(기지국, GPS, Wifi, RFID 태그 및 위치정보 시스템 수집 정보 등), 신용정보, 과금정보, 품질정보, 이용내역, 변경내역, 가입정보, 쿠키, 접속로그, 접속 IP, 통계데이터, 웹사이트 설정정보, 신호세기 등<br>
+        · 성명, 가입서비스 번호, 연락처, 주소(신분증주소 포함), 고유식별정보, 신분증기재사항, 주민등록상 주소지, 연체금액, 연체등록 예정일
+        · 신용도 판단정보(번호변작, 불법스팸, 보이스피싱, 불법대부광고 등으로 인한 서비스 정지 등)<br>
+        · 기타(추가) : 고유식별번호, 성명(법인명), 가입정보(통신사, 서비스 가입일·해지일), 국적(외국인)
+      </td>
+      <td rowspan="4" style="vertical-align: middle;">
+        서비스 가입 기간, 외국인 체류기간 동안 이용하고 요금정산 과·오납 등 분쟁대비를 위해 해지 후 요금완납 6개월까지 보유·이용(단, 약관 정보통신망이용촉진 및 정보보호 등에 관한 법률, 통신비밀보호법, 국세기본법 등 관련법령에 따라 보존할 필요성이 있는 경우는 규정에 따라 보유합니다.
+      </td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align:middle;">본인확인(서비스 본인확인, 휴대폰 본인확인 서비스, 제3자 모바일 본인확인, WiFi 접속), 주민등록전산상정볼르 통한 실사용자 확인</td>
+      <td style="vertical-align:middle;">성명(상호), 성별, 생년월일, 휴대폰 번호, 내/외국인 구분, 연계정보(CI), 중복가입</td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align:middle;">전기통신역무가입</td>
+      <td style="vertical-align:middle;">고유식별정보, 신용도판단정보(번호변작, 불법스팸, 보이스피싱, 불법대부광고 등으로 인한 서비스정지 등)</td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align:middle;">외국인 출국여부 확인</td>
+      <td style="vertical-align:middle;">고객식별정보, 성인(법인명), 가입정보(통신사, 서비스 가입일·해지일), 국적(외국인)</td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align:middle;">이동전화서비스 가입 시 부정개통방지를 위한 본인여부 검증</td>
+      <td style="vertical-align:middle;">연계정보(CI)</td>
+      <td style="vertical-align:middle;">서비스 가입 후 14일 까지</td>
+    </tr>
+
+    <tr>
+      <td style="vertical-align:middle;">가입의사 확인</td>
+      <td style="vertical-align:middle;">성명, 신분증 얼굴사진, 그 밖에 신분증 기재 사항(대리인 포함)</td>
+      <td style="vertical-align:middle;">해당업무 처리 완료 시까지<br>(거절의 경우, 상담 종료 시까지)</td>
+    </tr>
+  </table>
+</div>
+
+<div class="consent-agree" style="margin-top:1px; margin-bottom:4px;">
+  <span class="fw7 blue">※ 본인은 귀사가 위와 같이 개인정보/개인위치정보를 수집·이용하는 것에 동의합니다.</span>
+  <label class="lbl consent-agree-box">
+    <input type="checkbox" id="chk_consent2"> <span class="fw7 blue">동의</span>
+  </label>
+</div>
+
+  <!-- 3 -->
+  <div class="sec-wrap" style="margin-bottom:3px">
+    <div class="sec-head">3. 통신가입사실 유무안내서비스를 위한 개인정보 활용 동의 [필수]</div>
+  <div style="font-size:6.5pt; line-height:1.45; padding:4px 4px 3px 4px;">
+    ◦본인은 상기 내용과 전기통신사업법 제32조의6에 따라 SMS(본인 명의의 모든 휴대전화(타사 포함)로 발송) 또는 등기우편물(주민등록상 주소로 발송)을 통해 가입사실을 안내 받는 것에 동의합니다.
+  </div>
+</div>
+
+<div class="consent-agree" style="margin-top:1px; margin-bottom:4px;">
+  <span class="fw7 blue">※ 본인은 귀사가 위와 같이 개인정보를 제3자에게 제공하는 것에 동의합니다.</span>
+  <label class="lbl consent-agree-box">
+    <input type="checkbox" id="chk_consent3"> <span class="fw7 blue">동의</span>
+  </label>
+</div>
+
+  <!-- 4 -->
+  <div class="sec-wrap" style="margin-bottom:3px">
+    <div class="sec-head">4. 서비스 제공을 위한 개인정보 제3자 제공 동의 [필수]</div>
+    <table class="prv-table-tight">
+      <tr>
+        <th style="width:150px">제공받는자</th>
+        <th>목적</th>
+        <th style="width:270px">제공정보</th>
+      </tr>
+    <tr>
+      <td style="vertical-align:middle;">한국정보통신진흥협회, 행정자치부, 경찰청, 법무부, 보건복지부, 국가보훈처</td>
+      <td style="vertical-align:middle;">신분증 진위확인, 복지요금감면대상자 확인, 자격변동, 부적정정보확인</td>
+      <td style="vertical-align:middle;">성명, 주민등록번호(외국인의 경우 외국인등록번호·거소신고번호, 여권번호·생년월일·국적), 신분증발급일자, 운전면허번호, 사진 등 신분증 기재사항(대리인 포함)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:middle;">행정안전부, 과학기술정보통신부, 한국정보통신진흥협회</td>
+      <td style="vertical-align:middle;">주민등록전산 정보 확인</td>
+      <td style="vertical-align:middle;">성명, 주민등록번호</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:middle;">법무부, 한국정보통신진흥협회</td>
+      <td style="vertical-align:middle;">외국인 출국 사실 정보 확인</td>
+      <td style="vertical-align:middle;">성명, 국적, 여권번호, 등록번호, 생년월일, 회선번호</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:middle;">한국정보통신진흥협회, 행정자치부, 법무부</td>
+      <td style="vertical-align:middle;">사망, 완전출국 확인</td>
+      <td style="vertical-align:middle;">성명, 주민등록번호 (외국인등록번호)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:middle;">한국정보통신진흥협회, 행정자치부</td>
+      <td style="vertical-align:middle;">미성년자 부모 여부 확인</td>
+      <td style="vertical-align:middle;">고객 및 부모의 성명, 주민등록번호 (외국인의 경우 외국인등록번호·거소신고번호)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:middle;">한국정보통신진흥협회</td>
+      <td style="vertical-align:middle;">채무불이행정보 등록·해제(연체고객에 한함)</td>
+      <td style="vertical-align:middle;">체납금액, 고객명, 주민등록번호, 청구금액</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:middle;">한국인터넷진흥원</td>
+      <td style="vertical-align:middle;">스팸등록 이용제한(KISA 요청 시에 한함)</td>
+      <td style="vertical-align:middle;">스팸 신고된 고객명, 전화번호</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:middle;">금융결제원</td>
+      <td style="vertical-align:middle;">자동이체계좌 유효성인증(이용고객에 한함)</td>
+      <td style="vertical-align:middle;">계좌번호, 고객명, 생년월일</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:middle;">NICE평가정보(주)</td>
+      <td style="vertical-align:middle;">실명인증서비스(이용고객에 한함), 연체정보 등 신용도 판단정보(연체고객에 한함)</td>
+      <td style="vertical-align:middle;">고객명, 주민등록번호, 주소, 국적, 연락처, E-mail</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:middle;">한국정보통신진흥협회</td>
+      <td style="vertical-align:middle;">해지환급(해당고객에 한함)</td>
+      <td style="vertical-align:middle;">고객명, 전화번호, 생년월일</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:middle;">한국정보통신진흥협회</td>
+      <td style="vertical-align:middle;">방송통신신용정보 공동관리(식별, 연체, 복지, 이용정지), 외국인정보 인증, 국제전화 사기 공동대응, 명의도용 예방 및 분쟁조정, 명의도용방지 SMS 안내, 분실단말기 공동 관리, 휴대폰 대출방지</td>
+      <td style="vertical-align:middle;">고객명, 주민등록번호, 외국인 등록번호 또는 여권번호, 생년월일, 국적, 신분증 기재사항, 당사 가입자 여부, 이용내역, 연체금액</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:middle;">한국정보통신진흥협회</td>
+      <td style="vertical-align:middle;">휴대전화 대출사기, 부정이용 방지 및 리스크 관리</td>
+      <td style="vertical-align:middle;">서비스명, 개통일자, 당사 가입자 여부, 주민등록번호</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:middle;">한국정보통신진흥협회, 타 이동통신사</td>
+      <td style="vertical-align:middle;">이동전화 가입 회선 관리 (또는 다회선 관리 또는 서비스 가입제한)</td>
+      <td style="vertical-align:middle;">고유식별번호, 성명(법인명), 가입정보(통신사, 서비스 가입일·해지일), 이동전화번호 또는 전화번호 또는 회선번호, 국적(외국인), 생년월일</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:middle;">한국통신사업자연합회</td>
+      <td style="vertical-align:middle;">번호이동업무, 인터넷/음성/책자 등을 통해 번호를 안내하는 서비스 제공</td>
+      <td style="vertical-align:middle;">고객고유식별번호, 고객명, 서비스번호, 이동전화번호, 우편번호, 주소</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:middle;">서울보증보험(주)</td>
+      <td style="vertical-align:middle;">신용보험 가입가능 여부확인, 가입 및 유지 · 관리 및 분리보관 정보 조회</td>
+      <td style="vertical-align:middle;">개인식별정보(고객명, 주민등록번호(신용보험 가입목적으로 단순 전달용), 주소, 전화번호 등), 서비스 가입 및 이용정보, 단말기 할부계약 정보, 청구정보</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:middle;">한국정보통신진흥협회, 타 이동통신사</td>
+      <td style="vertical-align:middle;">통신요금연체 통지서비스</td>
+      <td style="vertical-align:middle;">성명, 연체정보등록예정일, 제공기관, 통신사 중복가입방지정보(공통DI)</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:middle;">한국정보통신진흥협회</td>
+      <td style="vertical-align:middle;">스팸문자 발송자 서비스 가입제한</td>
+      <td style="vertical-align:middle;">(필수)성명(법인명), 사업자등록번호, 주민등록번호, 외국인등록번호, 여권번호, 휴대폰 번호, 주소, 생년월일, 국적(외국인의 경우), 미납요금, 서비스 가입일/해지일/가입기간, 이용정지 사유</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:middle;">한국정보통신진흥협회, 타 이동통신사, 과학기술정보통신부</td>
+      <td style="vertical-align:middle;">명의도용방지 서비스, 통신가입사실우편안내</td>
+      <td style="vertical-align:middle;">성명, 고유식별정보, 신분증 기재사항, 주민등록상 주소지</td>
+   </tr>
+   <tr>
+    <td style="vertical-align:middle;">LG U+</td>
+    <td style="vertical-align:middle;">도매대가 정산, 분실휴대폰 위치정보 조회</td>
+    <td style="vertical-align:middle;">전화번호, 가입번호, 과금정보, 이용내역</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:middle;">한국정보통신진흥협회</td>
+    <td style="vertical-align:middle;">전기통신역무를 이용한 번호변작, 불법스팸발송, 보이스피싱, 불법대부광고 등으로 인한 서비스이용 정지자 서비스 가입제한</td>
+    <td style="vertical-align:middle;">고유식별번호, 이름, 이용정지 사유</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:middle;">한국정보통신진흥협회, 타 이동통신사</td>
+    <td style="vertical-align:middle;">방송통신 신용정보 공동관리(신용정보 식별, 연체/해제, 복지, 이용정지, 분실 단말기, 개통정보), 명의도용 예방(※ 전기통신사업법 제 32조의 6에 따라 SMS(본인명의 모든 휴대전화(타사포함) 발송) 또는 등기우편물(주민등록상 주소로 발송)을 통해 가입사실안내 및 분쟁조정, 부정사용방지(단말기대출, 국제전화, 스팸 발송), 해지환급금 안내</td>
+    <td style="vertical-align:middle;">고객명, 당사 가입자 여부, 서비스 이용내역, 연체금액, 주소지, 고유식별번호(주민등록번호, 여권번호, 운전면허번호, 외국인등록번호), 단말기 IMEI, 모델명, 일련번호, 개통일자, 국적(외국인), 생년월일, 회선번호, 회선수</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:middle;">한국정보통신진흥협회, 타 이동통신사</td>
+    <td style="vertical-align:middle;">동일명의 확인 서비스</td>
+    <td style="vertical-align:middle;">고객명, 고유식별번호(주민등록번호, 여권번호, 운전면허번호, 외국인등록번호), 단말기 IMEI, 모델명, 일련번호, 개통일자</td>
+  </tr>
+  <tr>
+    <td style="vertical-align:middle;">과학기술정보통신부, 한국정보통신진흥협회, 행정안전부, 경찰청, 국가보훈부, 법무부, 보건복지부</td>
+    <td style="vertical-align:middle;">부정가입 방지를 위한 본인확인(신분증 진위 여부 확인)</td>
+    <td style="vertical-align:middle;">성명, 고유식별번호(주민등록번호, 여권번호, 외국인등록번호, 운전면허번호)등 신분증 기재 사항(대리인 포함)</td>
+  </tr>
+    </table>
+<div style="font-size:6.1pt; line-height:1.4; color:#000; padding:2px 2px 2px 2px;">
+  · 보유 및 이용기간 : 정보제공일부터 서비스 해지 또는 제공 계약 종료일 중 먼저 도래하는 시점까지 이용하며,   이용기간이 종료한 시점에 파기. 다른 법령에 특별한 규정이 있을 경우 관련 법령에 따라 보관.<br>
+  · 단, LG U+는 서비스 제공 및 도매대가 정산완료 때까지이며, 서울보증보험(주)은 동의일부터 거래종료 후 5년까지(단, 거래종료 후 5년이 경과한 후에는 보험금 지급, 금융사고조사, 보험사기 방지·적발, 민원처리, 법령상 의무이행을 위한 경우에 한하여 보유·이용함)<br>
+  · 부정가입 방지를 위한 본인확인(신분증 진위 여부 확인)의 경우 해당업무 처리 완료 시까지(거절의 경우, 상담 종료 시까지)
+</div>
+  </div>
+
+<div class="consent-agree" style="margin-top:1px; margin-bottom:4px;">
+  <span class="fw7 blue">※ 본인은 귀사가 위와 같이 개인정보를 제3자에게 제공하는 것에 동의합니다.</span>
+  <label class="lbl consent-agree-box">
+    <input type="checkbox" id="chk_consent4"> <span class="fw7 blue">동의</span>
+  </label>
+</div>
+
+  <div class="doc-footer">※ 다음 장에 개인정보 활용동의서 계속</div>
+</div>
+
+
+<!-- ══════════════════════════════════════ PAGE 3 ══ -->
+<div class="page">
+  <div class="no-print" style="text-align:right;margin-bottom:6px">
+  </div>
+
+  <div class="consent-page-title">개인정보 활용동의서</div>
+
+  <!-- 5 -->
+  <div class="sec-wrap" style="margin-bottom:3px">
+    <div class="sec-head">5. 개인신용정보 조회 동의 [필수]</div>
+    <table class="prv-table-tight">
+      <tr>
+        <th style="width:170px">제공받는자</th>
+        <th style="width:170px">목적</th>
+        <th>제공하는 항목</th>
+        <th style="width:100px">보유/이용기간</th>
+      </tr>
+      <tr>
+   <td style="vertical-align:middle;">NICE신용평가정보(주), 한국정보통신진흥협회, 금융결제원, 신용카드사, 행정안전부, 국가보훈처, 보건복지부, 법무부</td>
+   <td style="vertical-align:middle;">본인확인·인증, 통신요금 체납여부, 복지할인 등 할인 가능 여부 확인, 가입가능 회선수 확인, 할부가입 여부 확인, 신용카드 등록·확인, 휴대폰 분실 등록·확인</td>
+   <td style="vertical-align:middle;">본인확인·인증 정보, 통신요금 체납, 할인가능 회선수, CB등급정보, 신용도, 보증보험 가입 여부, 신용카드정보</td>
+   <td style="vertical-align:middle;">서비스(회원) 가입 시부터 해지(탈퇴) 시까지</td>
+      </tr>
+    </table>
+
+    <table class="prv-table-tight">
+      <tr>
+        <th style="width:150px">제공하는자</th>
+        <th style="width:150px">제공받는자</th>
+        <th style="width:150px">목적</th>
+        <th>제공하는 항목</th>
+        <th style="width:130px">보유/이용기간</th>
+      </tr>
+      <tr>
+   <td rowspan="2" style="vertical-align: middle;">서울보증보험(주)</td>
+   <td style="vertical-align:middle;">(주)아정커뮤니케이션</td>
+   <td style="vertical-align:middle;">할부가능여부 심사,<br>신용보험의 가입 및 유지관리</td>
+   <td style="vertical-align:middle;">가입가능회선수/가입불가능 사유, 신용보험 계약정보, 신용도판단정보(대위변제, 대지급정보 등), 신용거래정보(신용보험 가입정보 등), 신용등급(평점)</td>
+   <td style="vertical-align:middle;">서비스 제공기간</td>
+      </tr>
+      <tr>
+   <td style="vertical-align:middle;">신용정보회사(코리아크레딧뷰로(주), NICE평가정보(주), 한국평가데이터(주) 등), 신용정보집중기관(한국신용정보원), 금융결제원</td>
+   <td style="vertical-align:middle;">신용보험의 가입 가능여부 판단, 가입 및 유지관리(채권추심, 대위권 행사 등) 신용정보의 집중관리 활용 및 교환</td>
+   <td style="vertical-align:middle;">개인식별정보(고객명, 고유식별정보, 연락처 등) 신용거래정보, 신용도 판단정보(연체, 대지급, 부도 등 정보)</td>
+   <td style="vertical-align:middle;">제공된 날로 부터 제공받는 자의 이용목적을 달성할 때까지 (최대, 거래 종료 후 5년까지)</td>
+      </tr>
+  <tr>
+    <td style="vertical-align:middle;">신용정보회사(코리아크레딧뷰로(주), NICE평가정보(주), 한국평가데이터(주) 등), 신용정보집중기관(한국신용정보원), 금융결제원, 한국평가데이터(주), 서울보증보험(서울보증보험(주)의 분리 보관 정보 이용 포함)</td>
+    <td style="vertical-align:middle;">서울보증보험(주)</td>
+    <td style="vertical-align:middle;">할부가능여부 심사, 신용보험의 가입 및 유지·관리(통계관리·분석 포함), 분리보관 정보 조회</td>
+    <td style="vertical-align:middle;">신용거래정보, 신용도 판단정보(연체, 대지급, 부도 등 정보), 신용등급(평점), 분리보관 정보</td>
+    <td style="vertical-align:middle;">제공된 날로 부터 제공받는 자의 이용목적을 달성할때까지(최대, 거래 종료 후 5년까지)</td>
+  </tr>
+  </table>
+<div style="font-size:6.1pt; line-height:1.4; color:#000; padding:1px 2px 2px 2px;">
+  ※ 조회 결과(신용정보법 등 관련 법령을 위반하는 등의 금융질서문란정보, 법원의 심판·결정, 조세·공공요금 체납 등의 공공기록정보 등)에 따라 청약에 대한 승낙을 유보할 수 있으며, 본 조회는 신용등급에 아무런 영향을 미치지 않습니다.
+</div>
+</div>
+
+<div class="consent-agree" style="margin-top:1px; margin-bottom:4px;">
+  <span class="fw7 blue">※ 본인은 귀사가 위와 같이 개인정보를 조회 및 이용하는 것에 동의합니다.</span>
+  <label class="lbl consent-agree-box">
+    <input type="checkbox" id="chk_consent5"><span class="fw7 blue">동의</span>
+  </label>
+</div>
+
+  <!-- 6 -->
+  <div class="sec-wrap" style="margin-bottom:3px">
+    <div class="sec-head">6. 개인정보 처리위탁 동의 [필수]</div>
+    <table class="prv-table-tight">
+      <tr>
+        <th style="width:100px">수탁자</th>
+        <th>위탁업무</th>
+      </tr>
+      <tr>
+   <td style="vertical-align:middle;">LG U+</td>
+   <td style="vertical-align:middle;">청구(청구서 출력 및 발송 등), 수납, 도매대가 정산, 로밍, 통화품질 민원상담, 본인확인서비스, 통신과금 서비스, 영업전산시스템, 멤버십 서비스, 이용자 및 서비스이용에 대한 통계분석, 부정개통방지를 위한 본인여부 검증</td>
+      </tr>
+      <tr>
+   <td style="vertical-align:middle;">한국정보통신진흥협회</td>
+   <td style="vertical-align:middle;">개인신용정보 전송 요구에 따른 중계기관 이용, 분실/도난 단말기 습득업무</td>
+      </tr>
+      <tr>
+   <td style="vertical-align:middle;">NICE평가정보(주)</td>
+   <td style="vertical-align:middle;">실명인증 서비스, 본인확인 및 인증 서비스, CI변환 서비스</td>
+      </tr>
+      <tr>
+   <td style="vertical-align:middle;">코리아크레딧뷰로(주)</td>
+   <td style="vertical-align:middle;">PASS 전자서명 인증서 통한 본인확인 업무, 고객 카드를 통한 본인확인 업무</td>
+      </tr>
+      <tr>
+   <td style="vertical-align:middle;">(주)아정네트웍스</td>
+   <td style="vertical-align:middle;">고객 전화상담(In/Out-bound Call) 관련 제반 업무, 멤버십 혜택(모바일 쿠폰) 발송, 고객 이벤트 경품 발송</td>
+      </tr>
+      <tr>
+   <td style="vertical-align:middle;">우체국</td>
+   <td style="vertical-align:middle;">USIM 배송(등기 배송)</td>
+      </tr>
+      <tr>
+   <td style="vertical-align:middle;">(주)세종텔레콤</td>
+   <td style="vertical-align:middle;">문자발송(SMS, MMS)에 따른 휴대폰번호 처리 업무</td>
+      </tr>
+      <tr>
+   <td style="vertical-align:middle;">텔레소프트</td>
+   <td style="vertical-align:middle;">아정당알뜰폰 서비스 영업전산시스템 관리·운영</td>
+      </tr>
+      <tr>
+   <td style="vertical-align:middle;">DNA클라우드</td>
+   <td style="vertical-align:middle;">아정당알뜰폰 서비스 영업전산시스템 인프라 관리·운영</td>
+      </tr>
+  </table>
+</div>
+
+<div class="consent-agree" style="margin-top:1px; margin-bottom:4px;">
+  <span class="fw7 blue">※ 본인은 귀사가 위와 같이 개인정보를 위탁하는 것에 동의합니다.</span>
+  <label class="lbl consent-agree-box">
+    <input type="checkbox" id="chk_consent6"> <span class="fw7 blue">동의</span>
+  </label>
+</div>
+
+  <!-- 7 -->
+  <div class="sec-wrap" style="margin-bottom:3px">
+    <div class="sec-head">7. 본인인증 서비스 이용동의 [필수]</div>
+    <table class="prv-table-tight">
+      <tr>
+        <th style="width:100px">제공받는자</th>
+        <th style="width:155px">목적</th>
+        <th>제공하는 항목</th>
+        <th style="width:155px">보유/이용기간</th>
+      </tr>
+      <tr>
+   <td style="vertical-align:middle;">(주)LG유플러스</td>
+   <td style="vertical-align:middle;">휴대폰 본인확인(이용고객에 한함) 서비스 이용,<br>휴대폰 간편인증(이용고객에 한함) 서비스 이용</td>
+   <td style="vertical-align:middle;">고객명, 전화번호, 주민등록번호, 생년월일, USIM정보, 단말기정보</td>
+   <td style="vertical-align:middle;">정보 제공일로부터 서비스 종료 또는 해지되는 시점</td>
+      </tr>
+    </table>
+</div>
+
+<div class="consent-agree" style="margin-top:1px; margin-bottom:4px;">
+  <span class="fw7 blue">※ 본인은 귀사가 위와 같이 개인정보를 조회 및 이용하는 것에 동의합니다.</span>
+  <label class="lbl consent-agree-box">
+    <input type="checkbox" id="chk_consent7"> <span class="fw7 blue">동의</span>
+  </label>
+</div>
+
+  <!-- 8 -->
+  <div class="sec-wrap" style="margin-bottom:3px">
+    <div class="sec-head">8. 민감정보(생체인식정보) 수집·이용 동의 [필수]</div>
+    <table class="prv-table-tight">
+      <tr>
+        <th style="width:350px">이용목적</th>
+        <th>수집항목</th>
+        <th style="width:100px">보유 및 이용기간</th>
+      </tr>
+      <tr>
+   <td style="vertical-align:middle;">신분증 진위확인을 위해 신분증 얼굴사진으로부터 특징 정보 추출,<br>안면인증(얼굴 라이브니스 체크, 신분증 내 얼굴 사진과 동일 여부 확인)</td>
+   <td style="vertical-align:middle;">신분증 이미지 내 얼굴사진, 안면인증 얼굴 영상 정보</td>
+   <td style="vertical-align:middle;">해당업무 처리 완료 시까지</td>
+      </tr>
+    </table>
+</div>
+
+<div class="consent-agree" style="margin-top:1px; margin-bottom:4px;">
+  <span class="fw7 blue">※ 본인은 귀사가 위와 같이 개인정보를 조회 및 이용하는 것에 동의합니다.</span>
+  <label class="lbl consent-agree-box">
+    <input type="checkbox" id="chk_consent8"> <span class="fw7 blue">동의</span>
+  </label>
+</div>
+
+  <!-- 9 -->
+  <div class="sec-wrap" style="margin-bottom:3px">
+    <div class="sec-head">9. 고객 혜택정보 제공을 위한 정보 수집·이용 동의 및 혜택·광고 수신 동의 [선택]</div>
+  <div style="font-size:6.1pt; line-height:1.45; padding:2px 2px 2px 2px;">
+    ◦귀사가 1항 및 2항의 필수동의 항목에서 수집한 개인정보, 고객세분화정보, 손호도 및 라이프스타일정보, 전산조회이력정보 및 상담이력정보, 고객간 관계에 관한 예측 정보 및 이정보들에 대한 통계·분석데이터를 해지시까지 수집·이용·분석하며 각종 서비스·상품 (주)아정커뮤니케이션이 제공하는 이동통신, 금융서비스, 결합·제휴상품, 스토리지 등 데이터·컨텐츠서비스, 부가서비스, 전자상거래서비스, 위치정보서비스, IT솔루션, Smart health서비스, 신규서비스·상품 포함, 제휴사와 결합된 서비스 및 제휴사의 서브시에 대하여 홍보, 가입권유, 프로모션, 생활정보, 멤버십정보, 이벤트, 해외로밍 안내(공항 또는 항만 위치 시 로밍 이용방법, 진행중인 이벤트 등 안내) 및 설문조사 목적으로 수집·이용·활용하는 것, 본인에게 혜택정보, 광고정보를 각종 통신방식(전화, SMS, LMS, MMS, WAP Push, 이메일, 우편, APP 안내 및 팝업)으로 전송하는 것에 동의합니다.<br>
+    ◦본인은 (주)LG유플러스가 본인에게 각종 통신방식(APP, 전화, 문자, 이메일, 우편)을 통해 제3자의 상품 및 서비스에 대한 광고 정보를 전송하는 것에 동의합니다.<br>
+    ◦가입신청서를 작성하였으나 최종 개통이 이루어지지 않는 경우, 추가 혜택 안내 및 가입 관련 안내를 위해 고객의 전화번호와 본인 확인 정보(이름, 생년월일)를 수집·이용하며, 이는 신청일로부터 2개월간 보유·이용됩니다.
+</div>
+</div>
+<div class="consent-agree" style="margin-top:1px; margin-bottom:4px;">
+  <span></span>
+  <label class="lbl consent-agree-box">
+    <input type="checkbox" id="chk_consent9"> <span class="fw7 blue">동의　</span>
+    <input type="checkbox" id="chk_consent10"> <span class="fw7 blue">미동의</span>
+  </label>
+</div>
+
+  <!-- 10 -->
+  <div class="sec-wrap" style="margin-bottom:3px">
+    <div class="sec-head">10. 고객 혜택정보/광고 정보 제공을 위한 개인정보 처리위탁 동의 [선택]</div>
+  <div style="font-size:6.1pt; line-height:1.45; padding:2px 2px 2px 2px;">
+    ◦신청서에 기재된 개인정보는 신규서비스 제공 및 광고를 의뢰하는 업체의 광고성 정보를 전화, 전자우편, SMS, MMS 등을 이용하여 전송하는데 사용할 수 있으며, 고객은 전송되는 광고성정보에 대해 전송받기를 거절할 수 있습니다. 고객에게 전송되는 광고성 정보는 "정보통신망 이용촉진 및 정보보호 등에 관한 법률"이나 관련 법규정을 준수하여 발송합니다.
+</div>
+</div>
+<div class="consent-agree" style="margin-top:1px; margin-bottom:4px;">
+  <span></span>
+  <label class="lbl consent-agree-box">
+    <input type="checkbox" id="chk_consent11"> <span class="fw7 blue">동의　</span>
+    <input type="checkbox" id="chk_consent12"> <span class="fw7 blue">미동의</span>
+  </label>
+</div>
+
+  <!-- 11 -->
+  <div class="sec-wrap" style="margin-bottom:3px">
+    <div class="sec-head">11. 개인정보 제3자 제공 동의 [선택]</div>
+    <table class="prv-table-tight">
+      <tr>
+        <th style="width:350px">이용목적</th>
+        <th>수집항목</th>
+        <th style="width:100px">보유 및 이용기간</th>
+      </tr>
+      <tr>
+   <td style="vertical-align:middle;">신분증 진위확인을 위해 신분증 얼굴사진으로부터 특징 정보 추출,<br>안면인증(얼굴 라이브니스 체크, 신분증 내 얼굴 사진과 동일 여부 확인)</td>
+   <td style="vertical-align:middle;">신분증 이미지 내 얼굴사진, 안면인증 얼굴 영상 정보</td>
+   <td style="vertical-align:middle;">해당업무 처리 완료 시까지</td>
+      </tr>
+    </table>
+</div>
+
+<div class="consent-agree" style="margin-top:1px; margin-bottom:4px;">
+  <span></span>
+  <label class="lbl consent-agree-box">
+    <input type="checkbox" id="chk_consent13"> <span class="fw7 blue">동의　</span>
+    <input type="checkbox" id="chk_consent14"> <span class="fw7 blue">미동의</span>
+  </label>
+</div>
+
+  <div class="consent-final-sign">
+    <span class="fw7 blue" style="font-size:10pt;">본인은 개인정보 활용동의에 대해 충분히 설명을 듣고, 그 내용을 이해하였으며, 위와 같은 내용으로 동의합니다.</span>
+    <div class="sign-bottom" style="display:flex; justify-content:flex-end; margin-top:4px;">
+      <div class="sign-box-wrap" style="display:flex; flex-direction:column; align-items:center;">
+        <div class="sign-label">신청인 / 가입자 &nbsp;(대리인)</div>
+        <div class="p-sign-box" onclick="openSignatureModal()">
+              <span>서명 &nbsp;/&nbsp; 인</span>
+              <img class="signature-image" style="display: none;" alt="Signature">
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div> <!-- /document-container -->
+</div> <!-- /lg-form-screen -->
+
+<script src="app.js"></script>
+
+  <!-- MODAL: DIGITAL SIGNATURE PAD -->
+  <div class="modal-overlay" id="signatureModal">
+    <div class="modal-box">
+      <div class="modal-title">🖊️ 고객 전자 서명</div>
+      <p class="modal-desc">아래의 패드 영역에 고객님이 직접 서명 또는 도장을 날인해 주세요.</p>
+      
+      <div class="canvas-container">
+        <div class="canvas-hint" id="sig-hint">
+          <span>🖊️</span>
+          터치 스크린 혹은 마우스로 서명해 주세요
+        </div>
+        <canvas id="sig-canvas" class="sig-canvas"></canvas>
+      </div>
+
+      <div class="modal-actions">
+        <button class="modal-btn modal-btn-cancel" id="btn-sig-cancel">취소</button>
+        <button class="modal-btn modal-btn-cancel" id="btn-sig-clear" style="background:#f1f5f9; color:#f43f5e; border:1px solid #fecdd3;">지우기</button>
+        <button class="modal-btn modal-btn-apply" id="btn-sig-apply">서명 완료</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

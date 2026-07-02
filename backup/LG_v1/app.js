@@ -22,12 +22,28 @@ let lastPosition = { x: 0, y: 0 };
 let hasDrawed = false;
 
 // ─────────────────────────────────────────────────────────────
-//  화면 구성 (Multi-page)
-//  index.html(망 선택) → LG_v2.html / KT_v1.html 로 페이지 이동합니다.
-//  과거 단일 페이지(SPA) 라우팅 함수(showLGForm 등)는 페이지 분리로 제거되었으며,
-//  '망 선택' 이동은 각 신청서 상단바의 location.href 로 처리합니다.
-//  app.js / style.css 는 LG·KT 신청서가 공통으로 재사용합니다.
+//  화면 라우팅 및 퍼널 제어 (Screen Routing & Funnel Controls)
 // ─────────────────────────────────────────────────────────────
+function showLGForm() {
+  document.getElementById('funnel-landing-screen').classList.add('hidden-screen');
+  document.getElementById('kt-construction-screen').classList.add('hidden-screen');
+  document.getElementById('lg-form-screen').classList.remove('hidden-screen');
+  window.scrollTo(0, 0);
+}
+
+function showKTConstruction() {
+  document.getElementById('funnel-landing-screen').classList.add('hidden-screen');
+  document.getElementById('lg-form-screen').classList.add('hidden-screen');
+  document.getElementById('kt-construction-screen').classList.remove('hidden-screen');
+  window.scrollTo(0, 0);
+}
+
+function showLandingScreen() {
+  document.getElementById('lg-form-screen').classList.add('hidden-screen');
+  document.getElementById('kt-construction-screen').classList.add('hidden-screen');
+  document.getElementById('funnel-landing-screen').classList.remove('hidden-screen');
+  window.scrollTo(0, 0);
+}
 
 // 페이지가 완전히 로드되면 동작 초기화
 document.addEventListener('DOMContentLoaded', () => {
