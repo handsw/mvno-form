@@ -1214,6 +1214,13 @@ body[data-network="kt"] { --network-color: #EE1C25; }   /* KT 레드 */
     page-break-inside: avoid;
   }
 
+  /* 서명란이 새 페이지에서 홀로 시작하지 않도록: 앞 항목에 이어 흐르게 하고,
+     공간이 부족하면 직전 항목까지 함께 다음 장으로 넘겨 '서명란 단독 페이지'를 방지 */
+  .consent-final-sign {
+    page-break-before: avoid;
+    break-before: avoid;
+  }
+
   /* 망 색상 바: 인쇄 시 매 페이지 상단에 고정 반복 (position:fixed) */
   .page::before,
   .consent-doc::before {
