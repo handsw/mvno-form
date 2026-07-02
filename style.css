@@ -1147,15 +1147,17 @@ body[data-network="kt"] { --network-color: #EE1C25; }   /* KT 레드 */
   }
 
   .page {
-    width: 210mm;
-    height: 297mm;
+    width: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
     margin: 0 !important;
-    padding: 8mm 8mm 6mm !important;
+    padding: 0 !important;          /* @page 여백이 상하좌우 인셋을 담당 */
     border: none !important;
     box-shadow: none !important;
+    overflow: visible !important;
     page-break-after: always;
   }
-  
+
   .page:last-child {
     page-break-after: avoid;
   }
@@ -1171,15 +1173,15 @@ body[data-network="kt"] { --network-color: #EE1C25; }   /* KT 레드 */
   
   @page {
     size: A4;
-    margin: 0;
+    margin: 12mm 8mm;   /* 상하 12mm · 좌우 8mm — 모든 페이지 동일 여백, 본문 폭 194mm 유지 */
   }
 
   /* ── 동의서 자연 분할 규칙 ────────────────────────────────
      페이지-1 신청서 본문은 고정 .page(위 규칙, page-break-after:always)로
      한 장을 채우고, 그 뒤 .consent-doc 가 아래 규칙에 따라 흘러갑니다. */
   .consent-doc {
-    width: 210mm;
-    padding: 8mm 8mm 6mm !important;
+    width: auto !important;
+    padding: 0 !important;          /* @page 여백이 인셋 담당 → 2~4p 상단 여백도 일관되게 확보 */
     margin: 0 !important;
     border: none !important;
     box-shadow: none !important;
