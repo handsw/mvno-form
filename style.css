@@ -1,4 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+/* ─────────────────────────────────────────────────────────────
+   Noto Sans KR 셀프호스팅 (Regular 400 · Bold 700)
+   Google Fonts CDN 제거 → 오프라인/헤드리스 검증과 실제 브라우저 렌더가 동일.
+   korean 서브셋(woff2)이 한글·라틴·숫자·주요 문장부호를 모두 포함하며,
+   미포함 기호(※ ← → ─ ◦ 등)는 Google Noto에도 없어 시스템 폰트로 동일 폴백됩니다.
+   ───────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/noto-sans-kr-korean-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/noto-sans-kr-korean-700.woff2') format('woff2');
+}
 
 :root {
   --primary: #003087;
@@ -1198,6 +1217,17 @@ body[data-network="kt"] { --network-color: #EE1C25; }   /* KT 레드 */
   .consent-page-title,
   h2, h3 {
     page-break-after: avoid;
+  }
+
+  /* 각 항의 "※ 본인은 … 동의합니다" 체크행은 직전 내용과 떨어지지 않게 */
+  .consent-agree {
+    page-break-before: avoid;
+    break-before: avoid;
+  }
+
+  /* 4항 표 아래 단서 불릿 블록(보유·이용기간 / 단서 / 부정가입)은 한 덩어리로 유지 */
+  .consent-note-block {
+    page-break-inside: avoid;
   }
 
   /* 최종 동의·서명란은 항상 잘리지 않는 한 덩어리로 유지 */
