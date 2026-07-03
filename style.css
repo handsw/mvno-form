@@ -1111,19 +1111,9 @@ body[data-network="kt"] { --network-color: #EE1C25; }   /* KT 레드 */
 }
 .consent-page-title .doc-net-badge { font-size: 8pt; }
 
-/* 페이지 상단 4px 망 색상 바 (화면: 시트별) */
-.consent-doc { position: relative; }
-.page::before,
-.consent-doc::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--network-color, var(--primary));
-  -webkit-print-color-adjust: exact;
-  print-color-adjust: exact;
+/* 긴 표(2항·4항 등)가 페이지를 넘어갈 때 머리글이 다음 장 상단에 자동 반복 */
+.prv-table-tight thead {
+  display: table-header-group;
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -1223,21 +1213,4 @@ body[data-network="kt"] { --network-color: #EE1C25; }   /* KT 레드 */
     break-before: avoid;
   }
 
-  /* 망 색상 바: 인쇄 시 매 페이지 상단에 고정 반복 (position:fixed) */
-  .page::before,
-  .consent-doc::before {
-    display: none;
-  }
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--network-color, var(--primary));
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-    z-index: 9999;
-  }
 }
