@@ -2,16 +2,28 @@
 //  아정당알뜰폰 가입신청서 비즈니스 로직 및 서명 모달 제어
 // ─────────────────────────────────────────────────────────────
 
-// 요금제 데이터 데이터베이스
+// 요금제 데이터 데이터베이스 (망별: <body data-network="lg|kt">)
 const PLANS = {
-  "life_4.5GB":    { data: "4.5GB",  call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "9,900원" },  
-  "life_7GB":      { data: "7GB",    call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "16,900원" },
-  "life_10GB":     { data: "10GB",   call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "19,900원" },
-  "life_15GB_100": { data: "15GB",  call: "100분",    extra: "100분",  sms: "100건",    period: "평생",  fee: "24,900원" },
-  "life_15GB_300": { data: "15GB",  call: "300분",    extra: "300분",  sms: "300건",    period: "평생",  fee: "25,900원" },
-  "life_71GB":     { data: "71GB(11GB+매일 2GB)", call: "기본제공", extra: "300분", sms: "기본제공", period: "평생", fee: "32,900원" },
-  "life_150GB":    { data: "매일 5GB", call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "39,900원" },
-  "life_100GB":    { data: "100GB",   call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "39,900원" }
+  lg: {
+    "life_4.5GB":    { data: "4.5GB",  call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "9,900원" },
+    "life_7GB":      { data: "7GB",    call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "16,900원" },
+    "life_10GB":     { data: "10GB",   call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "19,900원" },
+    "life_15GB_100": { data: "15GB",  call: "100분",    extra: "100분",  sms: "100건",    period: "평생",  fee: "24,900원" },
+    "life_15GB_300": { data: "15GB",  call: "300분",    extra: "300분",  sms: "300건",    period: "평생",  fee: "25,900원" },
+    "life_71GB":     { data: "71GB(11GB+매일 2GB)", call: "기본제공", extra: "300분", sms: "기본제공", period: "평생", fee: "32,900원" },
+    "life_150GB":    { data: "매일 5GB", call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "39,900원" },
+    "life_100GB":    { data: "100GB",   call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "39,900원" }
+  },
+  // KT: 4.5GB 없음, 전 요금제 밀리의서재 포함, LG 대비 +1,000원
+  kt: {
+    "life_7GB":      { data: "7GB",    call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "17,900원" },
+    "life_10GB":     { data: "10GB",   call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "20,900원" },
+    "life_15GB_100": { data: "15GB",  call: "100분",    extra: "100분",  sms: "100건",    period: "평생",  fee: "25,900원" },
+    "life_15GB_300": { data: "15GB",  call: "300분",    extra: "300분",  sms: "300건",    period: "평생",  fee: "26,900원" },
+    "life_71GB":     { data: "71GB(11GB+매일 2GB)", call: "기본제공", extra: "300분", sms: "기본제공", period: "평생", fee: "33,900원" },
+    "life_150GB":    { data: "매일 5GB", call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "40,900원" },
+    "life_100GB":    { data: "100GB",   call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "40,900원" }
+  }
 };
 
 // 서명 상태 데이터
@@ -40,8 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
 // ─────────────────────────────────────────────────────────────
 function fillPlan() {
   const planKey = document.getElementById('planSelect').value;
-  const p = PLANS[planKey];
-  
+  const net = document.body.dataset.network === 'kt' ? 'kt' : 'lg';
+  const p = (PLANS[net] || {})[planKey];
+
   document.getElementById('p_data').textContent   = p ? p.data   : '-';
   document.getElementById('p_call').textContent   = p ? p.call   : '-';
   document.getElementById('p_extra').textContent  = p ? p.extra  : '-';
