@@ -1197,6 +1197,19 @@ body[data-network="kt"] { --network-color: #EE1C25; }   /* KT 레드 */
     overflow: visible !important;
   }
 
+  /* 동의서 2페이지 압축: 표 글씨/줄간격/셀여백/섹션간격 축소 (본문 폭은 유지) */
+  .consent-doc .prv-table-tight {
+    font-size: 5.0pt;
+    line-height: 1.08;
+  }
+  .consent-doc .prv-table-tight th,
+  .consent-doc .prv-table-tight td {
+    padding: 0.5px 2px;
+  }
+  .consent-doc .consent-item {
+    margin-bottom: 1px;
+  }
+
   /* 표 행이 페이지 중간에서 잘리지 않도록 */
   tr {
     page-break-inside: avoid;
@@ -1217,6 +1230,13 @@ body[data-network="kt"] { --network-color: #EE1C25; }   /* KT 레드 */
   .consent-page-title,
   h2, h3 {
     page-break-after: avoid;
+  }
+
+  /* 동의서 3페이지 강제 분할: 4항 / 국외이전 안내 앞에서 새 페이지 시작
+     → (1·2·3항) / (4·5·6항) / (국외이전·7·8·9·10항+서명) */
+  .consent-page-break {
+    page-break-before: always;
+    break-before: page;
   }
 
   /* 각 항의 "※ 본인은 … 동의합니다" 체크행은 직전 내용과 떨어지지 않게 */
