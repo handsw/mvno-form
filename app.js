@@ -10,8 +10,8 @@ const PLANS = {
     "life_10GB":     { data: "10GB",   call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "19,900원" },
     "life_15GB_100": { data: "15GB",  call: "100분",    extra: "100분",  sms: "100건",    period: "평생",  fee: "24,900원" },
     "life_15GB_300": { data: "15GB",  call: "300분",    extra: "300분",  sms: "300건",    period: "평생",  fee: "25,900원" },
-    "life_71GB":     { data: "71GB(11GB+매일 2GB)", call: "기본제공", extra: "300분", sms: "기본제공", period: "평생", fee: "32,900원" },
-    "life_150GB":    { data: "매일 5GB", call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "39,900원" },
+    "life_71GB":     { data: "71GB(11GB+일2GB)", call: "기본제공", extra: "300분", sms: "기본제공", period: "평생", fee: "32,900원" },
+    "life_150GB":    { data: "150GB(일5GB)", call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "39,900원" },
     "life_100GB":    { data: "100GB",   call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "39,900원" }
   },
   // KT: 4.5GB 없음, 전 요금제 밀리의서재 포함, LG 대비 +1,000원
@@ -20,8 +20,8 @@ const PLANS = {
     "life_10GB":     { data: "10GB",   call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "20,900원" },
     "life_15GB_100": { data: "15GB",  call: "100분",    extra: "100분",  sms: "100건",    period: "평생",  fee: "25,900원" },
     "life_15GB_300": { data: "15GB",  call: "300분",    extra: "300분",  sms: "300건",    period: "평생",  fee: "26,900원" },
-    "life_71GB":     { data: "71GB(11GB+매일 2GB)", call: "기본제공", extra: "300분", sms: "기본제공", period: "평생", fee: "33,900원" },
-    "life_150GB":    { data: "매일 5GB", call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "40,900원" },
+    "life_71GB":     { data: "71GB(11GB+일2GB)", call: "기본제공", extra: "300분", sms: "기본제공", period: "평생", fee: "33,900원" },
+    "life_150GB":    { data: "150GB(일5GB)", call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "40,900원" },
     "life_100GB":    { data: "100GB",   call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "40,900원" }
   }
 };
