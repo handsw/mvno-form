@@ -1136,6 +1136,111 @@ body[data-network="kt"] { --network-color: #EE1C25; }   /* KT 레드 */
 }
 
 /* ─────────────────────────────────────────────────────────────
+   고객구분별 필수 서류 안내 (모달 리스트) — LG_v3/KT_v2
+   ───────────────────────────────────────────────────────────── */
+.doc-guide-list {
+  list-style: none;
+  margin: 4px 0 18px;
+  padding: 0;
+  max-height: 320px;
+  overflow-y: auto;
+  text-align: left;
+}
+.doc-guide-list li {
+  font-size: 0.95rem;
+  padding: 8px 10px 8px 30px;
+  border-bottom: 1px solid #f1f5f9;
+  position: relative;
+  color: #1f2937;
+  line-height: 1.4;
+}
+.doc-guide-list li::before {
+  content: '📄';
+  position: absolute;
+  left: 6px;
+  top: 7px;
+  font-size: 0.9rem;
+}
+/* 팝업 내 '법정대리인 가입동의서' 작성 링크 (라벨 좌측 · 작성하러가기 우측, 볼드·밑줄없음) */
+.doc-guide-list li a.doc-guide-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+.doc-guide-list li a.doc-guide-link .doc-guide-go {
+  white-space: nowrap;
+}
+.doc-guide-list li a.doc-guide-link:hover {
+  color: var(--accent);
+}
+
+/* 법정대리인 가입동의서(guardian) — 서명 섹션을 페이지 하단으로 배치
+   (화면은 .page 고정높이 297mm, 인쇄는 아래 @media print 에서 min-height 부여) */
+.page-fill {
+  display: flex;
+  flex-direction: column;
+}
+.page-fill .sign-area {
+  margin-top: auto;
+}
+
+/* 망 선택 퍼널 — 법정대리인 가입동의서 작성 버튼 */
+.guardian-cta {
+  margin-top: 10px;
+}
+.btn-guardian {
+  width: 100%;
+  padding: 14px 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: inherit;
+  color: #ffffff;
+  background: var(--primary);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-guardian:hover {
+  background: #002566;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px -6px rgba(0, 48, 135, 0.4);
+}
+
+/* 미성년자 법정대리인 섹션 포함 시 페이지1 유지용 폼 압축 (LG_v3/KT_v2 전용) */
+.form-compact .sec-wrap { margin-bottom: 2px; }
+.form-compact .sec-body { padding: 2px 4px; }
+.form-compact .agree-block { font-size: 6.5pt; line-height: 1.25; padding: 3px 6px; }
+.form-compact .agree-row { margin-bottom: 1px; }
+.form-compact .notice-box { font-size: 6.2pt; line-height: 1.32; padding: 2px 6px; }
+.form-compact #blk_guardian td,
+.form-compact #blk_guardian th { padding: 2px 5px; }
+
+/* 서명란 축소본 (법정대리인 섹션 공간 확보 → 페이지1 유지) */
+.sign-area.compact-sign {
+  padding: 2px 8px;
+}
+.sign-area.compact-sign .sign-text {
+  font-size: 6.8pt;
+  line-height: 1.2;
+  margin-bottom: 1px;
+}
+.sign-area.compact-sign .p-sign-box {
+  height: 34px;
+}
+/* 압축 폼 푸터 여백 축소 */
+.form-compact .doc-footer {
+  margin-top: 2px;
+  padding-top: 2px;
+  font-size: 6pt;
+}
+
+/* ─────────────────────────────────────────────────────────────
    PRINT MEDIA QUERY
    ───────────────────────────────────────────────────────────── */
 @media print {
@@ -1169,6 +1274,11 @@ body[data-network="kt"] { --network-color: #EE1C25; }   /* KT 레드 */
 
   .page:last-child {
     page-break-after: avoid;
+  }
+
+  /* guardian: 서명 섹션을 페이지 하단으로 밀기 위해 페이지 높이 확보 */
+  .page-fill {
+    min-height: 270mm !important;
   }
   
   input[type="text"], select {

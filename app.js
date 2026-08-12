@@ -67,6 +67,98 @@ function fillPlan() {
 }
 
 // ─────────────────────────────────────────────────────────────
+//  고객구분: 필수 서류 안내 팝업 + 법정대리인 섹션 토글 (LG_v3/KT_v2 전용)
+//  (해당 요소가 없는 신청서에서는 아무 동작도 하지 않음 — 하위 호환)
+// ─────────────────────────────────────────────────────────────
+const DOC_GUIDE = {
+  "개인":       { title: "개인(일반) 필수 서류", items: ["신분증 (주민등록증, 운전면허증)"] },
+  "미성년자":   { title: "미성년자 필수 서류", items: ["신분증", "가족관계 증명서 (발급일로부터 3개월 이내)", "기본증명서(상세) (발급일로부터 3개월 이내)", "법정대리인(부모) 신분증 (주민등록증, 운전면허증)", "법정대리인 가입동의서"] },
+  "외국인":     { title: "외국인 필수 서류", items: ["신분증 (외국인등록증, 국내거소신고증)", "통장 사본 또는 본인 명의 신용카드 (국내 카드사)"] },
+  "개인사업자": { title: "개인사업자 필수 서류", items: ["(준비 중 — 추후 안내)"] },
+  "법인":       { title: "법인사업자 필수 서류", items: ["(준비 중 — 추후 안내)"] }
+};
+
+function onCustTypeChange(value) {
+  // 미성년자일 때만 법정대리인 동의서 섹션 활성화 (번호이동 영역처럼 항상 표시하되 비활성/활성 토글)
+  const g = document.getElementById('blk_guardian');
+  if (g) g.classList.toggle('cond-off', value !== '미성년자');
+  showDocGuide(value);
+}
+
+function showDocGuide(value) {
+  const modal = document.getElementById('docGuideModal');
+  const info = DOC_GUIDE[value];
+  if (!modal || !info) return;
+  const t = document.getElementById('docGuideTitle');
+  const list = document.getElementById('docGuideList');
+  if (t) t.textContent = info.title;
+  if (list) list.innerHTML = info.items.map(function (i) {
+    // '법정대리인 가입동의서' 항목은 작성 폼(guardian.html)으로 이동하는 링크로 노출
+    if (i.indexOf('법정대리인 가입동의서') === 0) {
+      return '<li><a href="guardian.html" target="_blank" rel="noopener" class="doc-guide-link">' + i + '<span class="doc-guide-go">✏️ 작성하러 가기</span></a></li>';
+    }
+    return '<li>' + i + '</li>';
+  }).join('');
+  modal.classList.add('show');
+}
+
+function closeDocGuide() {
+  const modal = document.getElementById('docGuideModal');
+  if (modal) modal.classList.remove('show');
+}
+
+// ─────────────────────────────────────────────────────────────
+//  법정대리인 가입동의서(guardian.html) 필수값 검증 및 인쇄
+//  ※ 고객정보(미성년자) 휴대폰번호만 선택, 그 외 전부 필수 + 서명
+// ─────────────────────────────────────────────────────────────
+function validateGuardianAndPrint() {
+  clearErrors();
+  const errors = [];
+
+  const REQUIRED = [
+    { id: 'g_minor_name',  label: '가입자명(미성년자)' },
+    { id: 'g_minor_birth', label: '생년월일(미성년자)' },
+    { id: 'g_name',        label: '법정대리인명' },
+    { id: 'g_birth',       label: '법정대리인 생년월일' },
+    { id: 'g_tel',         label: '법정대리인 휴대폰 번호' },
+  ];
+  REQUIRED.forEach(({ id, label }) => {
+    const el = document.getElementById(id);
+    if (el && el.value.trim() === '') {
+      el.classList.add('field-error');
+      errors.push(label);
+    }
+  });
+
+  // 가입자와의 관계 (부/모/기타 중 택1, 기타 선택 시 내용 필수)
+  const rel = document.querySelector('input[name="g_rel"]:checked');
+  if (!rel) {
+    document.querySelectorAll('input[name="g_rel"]').forEach(r => r.parentElement.classList.add('check-error'));
+    errors.push('가입자와의 관계');
+  } else if (rel.value === '기타') {
+    const etc = document.getElementById('g_rel_etc');
+    if (etc && etc.value.trim() === '') {
+      etc.classList.add('field-error');
+      errors.push('가입자와의 관계(기타 내용)');
+    }
+  }
+
+  // 법정대리인 서명
+  const signImg = document.querySelector('.signature-image');
+  if (!signImg || !signImg.src || signImg.style.display === 'none') {
+    errors.push('법정대리인 서명');
+    document.querySelectorAll('.p-sign-box').forEach(box => { box.style.borderColor = 'var(--accent)'; });
+  }
+
+  if (errors.length > 0) {
+    document.getElementById('errorList').innerHTML = errors.map(e => `<li>${e}</li>`).join('');
+    document.getElementById('validModal').classList.add('show');
+    return;
+  }
+  window.print();
+}
+
+// ─────────────────────────────────────────────────────────────
 //  납부방법 토글 (togglePay)
 // ─────────────────────────────────────────────────────────────
 function togglePay(value) {
