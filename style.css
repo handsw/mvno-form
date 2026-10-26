@@ -1254,6 +1254,11 @@ body[data-network="kt"] { --network-color: #EE1C25; }   /* KT 레드 */
   .top-bar, .no-print, .modal-overlay {
     display: none !important;
   }
+
+  /* 입력 안내(placeholder: 당사 기재, 000-00-00000 등)는 화면에서만 보이고 출력물에는 미노출 */
+  ::placeholder {
+    color: transparent !important;
+  }
   
   .document-container {
     padding: 0 !important;

@@ -525,7 +525,7 @@ function validateAndPrint() {
   const bizType = document.querySelector('input[name="biz_type"]:checked')?.value;
   if (bizType === '번호이동') {
     fieldsToCheck.push({ id: 'inp_mnp_num', label: '이동할 번호', type: 'text' });
-  } else {
+  } else if (bizType === '신규') {
     // 신규가입의 경우: 희망번호 입력 또는 랜덤번호 생성 선택 둘 중 하나는 해야 함
     const inpNewNum = document.getElementById('inp_new_num');
     const chkRandomNum = document.getElementById('chk_random_num');
@@ -600,6 +600,9 @@ function validateAndPrint() {
       box.style.borderColor = 'var(--accent)';
     });
   }
+
+  // 신청서별 추가 검증 (법인 신청서: 업무구분·[별지] 회선 명세)
+  if (typeof extraValidate === 'function') extraValidate(errors);
 
   // 에러 리스트 팝업 띄우기
   if (errors.length > 0) {
