@@ -590,9 +590,9 @@ function validateAndPrint() {
     }
   }
 
-  // 3. 서명 여부 검증
+  // 3. 서명 여부 검증 (법인 신청서는 출력 후 인감 날인이라 생략)
   const signImg = document.querySelector('.signature-image');
-  if (!signImg || !signImg.src || signImg.style.display === 'none') {
+  if (!document.querySelector('.p-sign-box.stamp-only') && (!signImg || !signImg.src || signImg.style.display === 'none')) {
     errors.push('신청인 서명');
     
     // 서명 상자 영역 에러 표시

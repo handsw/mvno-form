@@ -451,6 +451,20 @@ input[type="checkbox"], input[type="radio"] {
   display: none;
 }
 
+/* 법인 신청서: 전자서명 없이 출력 후 인감 날인 — 화면은 초록 가이드, 출력물은 빈 칸 */
+.p-sign-box.stamp-only,
+.p-sign-box.stamp-only:hover {
+  cursor: default;
+  color: #2f7d1f;
+  font-weight: 700;
+  background: #eaffd5;
+  border-color: var(--border-light);
+}
+@media print {
+  .p-sign-box.stamp-only { background: #ffffff !important; }
+  .p-sign-box.stamp-only span { visibility: hidden; }
+}
+
 /* ─────────────────────────────────────────────────────────────
    CONSENT PAGES STYLING (PAGE 2, 3)
    ───────────────────────────────────────────────────────────── */
