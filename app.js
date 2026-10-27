@@ -12,7 +12,9 @@ const PLANS = {
     "life_15GB_300": { data: "15GB",  call: "300분",    extra: "300분",  sms: "300건",    period: "평생",  fee: "25,900원" },
     "life_71GB":     { data: "71GB(11GB+일2GB)", call: "기본제공", extra: "300분", sms: "기본제공", period: "평생", fee: "32,900원" },
     "life_150GB":    { data: "150GB(일5GB)", call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "39,900원" },
-    "life_100GB":    { data: "100GB",   call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "39,900원" }
+    "life_100GB":    { data: "100GB",   call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "39,900원" },
+    // 법인 신청서 전용
+    "tlink_5GB":     { data: "5GB",    call: "50분",     extra: "X",      sms: "50건",     period: "평생",  fee: "5,900원" }
   },
   // KT: 4.5GB 없음, 전 요금제 밀리의서재 포함, 요금은 LG와 동일
   kt: {
@@ -22,7 +24,9 @@ const PLANS = {
     "life_15GB_300": { data: "15GB",  call: "300분",    extra: "300분",  sms: "300건",    period: "평생",  fee: "25,900원" },
     "life_71GB":     { data: "71GB(11GB+일2GB)", call: "기본제공", extra: "300분", sms: "기본제공", period: "평생", fee: "32,900원" },
     "life_150GB":    { data: "150GB(일5GB)", call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "39,900원" },
-    "life_100GB":    { data: "100GB",   call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "39,900원" }
+    "life_100GB":    { data: "100GB",   call: "기본제공",  extra: "300분",  sms: "기본제공",  period: "평생",  fee: "39,900원" },
+    // 법인 신청서 전용
+    "tlink_5GB":     { data: "5GB",    call: "50분",     extra: "X",      sms: "50건",     period: "평생",  fee: "5,900원" }
   }
 };
 
