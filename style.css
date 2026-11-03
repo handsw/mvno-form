@@ -504,6 +504,13 @@ input[type="checkbox"], input[type="radio"] {
   margin-right: 3px;
 }
 
+/* 각 항 동의 거부권 고지 ("※ 본인은 귀사가…" 체크행 바로 위 한 줄) */
+.consent-refuse {
+  font-size: 6.1pt;
+  line-height: 1.45;
+  padding: 0 2px;
+}
+
 .prv-table-tight {
   width: 100%;
   border-collapse: collapse;
@@ -1368,8 +1375,20 @@ body[data-network="kt"] { --network-color: #EE1C25; }   /* KT 레드 */
     break-before: page;
   }
 
-  /* 각 항의 "※ 본인은 … 동의합니다" 체크행은 직전 내용과 떨어지지 않게 */
+  /* 동의 거부권 고지: 출력 시 압축 (동의서 2장 + 신청서 1장 = 총 3장 유지) */
+  .consent-refuse {
+    font-size: 5.2pt;
+    line-height: 1.15;
+    padding: 0 2px;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  /* 각 항의 "※ 본인은 … 동의합니다" 체크행은 직전 내용과 떨어지지 않게 (+ 출력 시 상하 간격 축소) */
   .consent-agree {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-bottom: 2px !important;
     page-break-before: avoid;
     break-before: avoid;
   }
