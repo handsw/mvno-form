@@ -39,7 +39,7 @@ let hasDrawed = false;
 
 // ─────────────────────────────────────────────────────────────
 //  화면 구성 (Multi-page)
-//  index.html(망 선택) → LG_v2.html / KT_v1.html 로 페이지 이동합니다.
+//  index.html(망 선택) → LG_v3.html / KT_v2.html 로 페이지 이동합니다.
 //  과거 단일 페이지(SPA) 라우팅 함수(showLGForm 등)는 페이지 분리로 제거되었으며,
 //  '망 선택' 이동은 각 신청서 상단바의 location.href 로 처리합니다.
 //  app.js / style.css 는 LG·KT 신청서가 공통으로 재사용합니다.
