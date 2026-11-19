@@ -11,8 +11,9 @@ for customer data.
 
 - `index.html` network chooser -> `LG_v3.html` / `KT_v2.html`; `guardian.html`
   법정대리인 가입동의서.
-- `LG_corp_v4.html` corporate form, reachable only via the private link in
-  `_redirects` (`/f6pq8acy7w -> /LG_corp_v4`, Cloudflare Pages).
+- `LG_corp_v4.html` corporate form: a separate page not linked from `index.html`;
+  its URL is shared only with corporate staff. Optional short link in
+  `_redirects` (`/f6pq8acy7w -> /LG_corp_v4`, works on Cloudflare Pages).
 - Shared `app.js` (wizard, validation, signature, print) and `style.css`
   (screen + print layout); `fonts/` are self-hosted Noto Sans KR subsets.
 
