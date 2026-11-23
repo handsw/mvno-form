@@ -1318,7 +1318,7 @@ body[data-network="kt"] { --network-color: #EE1C25; }   /* KT 레드 */
   
   @page {
     size: A4;
-    margin: 12mm 8mm;   /* 상하 12mm · 좌우 8mm — 모든 페이지 동일 여백, 본문 폭 194mm 유지 */
+    margin: 10mm 8mm;   /* 상하 10mm · 좌우 8mm — 모든 페이지 동일 여백, 본문 폭 194mm 유지 */
   }
 
   /* ── 동의서 자연 분할 규칙 ────────────────────────────────
@@ -1373,6 +1373,18 @@ body[data-network="kt"] { --network-color: #EE1C25; }   /* KT 레드 */
   .consent-page-break {
     page-break-before: always;
     break-before: page;
+  }
+
+  /* 동의서 항목 제목줄: 출력 시 높이 축소 (9항 가입제한서비스 추가 후 3장 유지) */
+  .consent-doc .sec-head {
+    font-size: 7pt;
+    padding: 1px 6px;
+  }
+
+  /* 동의서 본문 문단(인라인 6.1pt): 출력 시 소폭 축소 */
+  .consent-doc .sec-wrap > div[style*="font-size:6.1pt"] {
+    font-size: 5.6pt !important;
+    line-height: 1.35 !important;
   }
 
   /* 동의 거부권 고지: 출력 시 압축 (동의서 2장 + 신청서 1장 = 총 3장 유지) */

@@ -594,6 +594,13 @@ function validateAndPrint() {
     }
   }
 
+  // 가입제한서비스(엠세이퍼) 동의/거부 중 하나 선택 필수 (해당 항목이 있는 신청서만)
+  const msafer = document.querySelectorAll('input[name="msafer"]');
+  if (msafer.length && !document.querySelector('input[name="msafer"]:checked')) {
+    msafer.forEach(r => r.parentElement.classList.add('check-error'));
+    errors.push('가입제한서비스 동의 / 거부(미가입) 선택');
+  }
+
   // 3. 서명 여부 검증 (법인 신청서는 출력 후 인감 날인이라 생략)
   const signImg = document.querySelector('.signature-image');
   if (!document.querySelector('.p-sign-box.stamp-only') && (!signImg || !signImg.src || signImg.style.display === 'none')) {
