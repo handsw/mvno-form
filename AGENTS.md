@@ -14,6 +14,9 @@ for customer data.
 - `LG_corp_v4.html` corporate form: a separate page not linked from `index.html`;
   its URL is shared only with corporate staff. Optional short link in
   `_redirects` (`/f6pq8acy7w -> /LG_corp_v4`, works on Cloudflare Pages).
+- LG/KT consent section 9 is the 가입제한서비스(엠세이퍼) notice (since 2026-11-20):
+  one of 동의 / 거부(미가입) must be chosen (`input[name="msafer"]`, checked in
+  `app.js`). Not yet added to the corporate form.
 - Shared `app.js` (wizard, validation, signature, print) and `style.css`
   (screen + print layout); `fonts/` are self-hosted Noto Sans KR subsets.
 
